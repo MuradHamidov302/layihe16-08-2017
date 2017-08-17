@@ -1,12 +1,15 @@
   //id reating------------------
-// $(".listing-item").hover(function(){
-// 	$(".listing-item-rating").fadeOut();
-// 	$(".category-icon ").fadeOut();
-// 	$(".listing-black-overlay").fadeOut();
-	
-// })
 
 
+ //   $(".listing-item").hover(function(){
+ //       $(".listing-item-rating").fadeOut();
+ //       $(".category-icon ").fadeOut();
+	// $(".listing-black-overlay").fadeOut();
+ //        }, function(){
+ //        $(".listing-item-rating").fadeIn();
+ //       $(".category-icon ").fadeIn();
+	//    $(".listing-black-overlay").fadeIn();
+ //    });
 
 //id reating end---------------
 

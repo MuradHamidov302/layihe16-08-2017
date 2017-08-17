@@ -1,14 +1,5 @@
 
 #category{
-				.container-fluid {
-				    position: relative;
-				}
-
-
-				.row {
-				    margin: 0;
-				}
-
 		.row-title h4 {
 				    color: #555555;
 				    position: relative;
@@ -52,6 +43,15 @@
 				}
 
 
+                .container-fluid {
+                    position: relative;
+                }
+
+
+                .row {
+                    margin: 0;
+                }
+
 
 				.row-title {
 				    margin-top: 150px;
@@ -66,8 +66,6 @@
 				    border-bottom: 1px dashed rgba(160,160,160,0.4);
 				    padding-bottom: 18px;
 				    width: 100%;
-				   left: 65px;
-				    padding-right: 130px;
 					}
 				}
 
@@ -75,20 +73,6 @@
 				    font-family: 'Capriola', sans-serif;
 				    color: rgb(38,163,135);
 				    text-align: center;
-				}
-
-				.front-categories .row-title h1:before {
-				    font-family: 'icon';
-				    content: "\ea7a";
-				    position: absolute;
-				    top: 100%;
-				    left: -65px;
-				    margin-top: -28px;
-				    font-size: 45px;
-				    width: 60px;
-				    padding-right: 16px;
-				    text-align: center;
-				    border-right: 1px dashed rgb(38,163,135);
 				}
 
 				.cat-itens {
@@ -225,22 +209,32 @@
 				    	width:100%;
                         
 				    }
+                       .row-title h1{
+                    font-size: 20px;
+                        
+             }
 				}
 }
-
+//catigory end----------------------------------------------------------------------------------------------------
 // raiting trending begin
 #reyting{
 
 .listing-item-link{
     overflow: hidden;
+    padding: 3px;
+    background: black;
     display: inline-block;
+    opacity: 0.8;
          img {
          
             transform: scale(0.92);
             background:black;
-            opacity: 0.7;
+            opacity: 1 !important; 
+            width: 100%;
+            display: inline-block;
+            border-radius: 50%;
         }
-         
+   
 }
   
 	.trending {
@@ -257,35 +251,33 @@
     text-align: center;
     padding-bottom: 50px;
     box-shadow: 0 10000px rgba(0,0,0,0.75) inset;
-}
+    }
 
 .row-title {
 	padding: 70px;
 
-	h1 {
-    position: relative;
-    margin-top: 0;
-    border-bottom: 1px dashed rgba(160,160,160,0.4);
-    padding-bottom: 18px;
-    width: 100%;
-    left: 65px;
-    padding-right: 130px; 
-     font-family: 'Capriola', sans-serif;
-    color: rgb(38,163,135);
-    text-align: center;
-}
+    	h1 {
+        position: relative;
+        margin-top: 0;
+        border-bottom: 1px dashed rgba(160,160,160,0.4);
+        padding-bottom: 18px;
+        width: 100%;
+         font-family: 'Capriola', sans-serif;
+        color: rgb(38,163,135);
+        text-align: center;
+    }
 
-h4 {
-    color: #555555;
-    position: relative;
-    margin: -11px 65px 0 65px;
-    padding-top: 15px;
-    line-height: 30px;
-    display: inline-block;
-    border-top: 1px dashed rgb(38,163,135);
-    opacity: 0.6;
-     color: rgba(255,255,255,0.9);
-}
+        h4 {
+            color: #555555;
+            position: relative;
+            margin-top: -11px ;
+            padding-top: 15px;
+            line-height: 30px;
+            display: inline-block;
+            border-top: 1px dashed rgb(38,163,135);
+            opacity: 0.6;
+             color: rgba(255,255,255,0.9);
+        }
 }
 
 
@@ -295,8 +287,6 @@ h4 {
     position: relative;
     margin-left: 15px;
     margin-right: 15px;
-}
-.ribbon {
     color: #fff;
     background: rgb(38,163,135);
     position: relative;
@@ -312,13 +302,6 @@ h4 {
 }
 
 
-.listing-item-title-centralizer:before {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-    margin-right: -0.25em;
-}
 .listing-item .listing-item-link:before, .listing-item-rating {
     font-family: "FontAwesome";
     content: "\f0e7";
@@ -345,16 +328,6 @@ h4 {
     background: url("../img/wave2.png") top center;
     z-index: 15;
 }
-
-.listing-item {
-    width: 100%;
-    max-width: 320px;
-    position: relative;
-    display: inline-block;
-    margin-bottom: 60px;
-}
-
-
 
 .listing-item-title-centralizer:before {
     content: '';
@@ -384,12 +357,13 @@ h4 {
 }
 
 
+
 .category-icon {
     position: absolute;
-    width: 50px;
-    height: 50px;
-    line-height: 44px;
-    font-size: 30px;
+    width: 38px;
+    height: 38px;
+    line-height: 37px;
+    font-size: 20px;
     text-align: center;
     color: #fff;
     background: #333;
@@ -429,11 +403,7 @@ h4 {
     font-family: 'Capriola', sans-serif;
     font-size: 15px;
     background: rgb(38,163,135);
-}
-
-
-.listing-item-data {
-    margin-top: 30px;
+     transition: all 2s;
 }
 
 .listing-item-data:before {
@@ -471,14 +441,6 @@ h4 {
     display: block;
 }
 
-.listing-category-name a {
-    display: inline-block;
-    color: rgb(38,163,135);
-    margin-top: 3px;
-    text-transform: uppercase;
-    font-size: 13px;
-    text-shadow: 0 0 6px rgba(0,0,0,0.7);
-}
 .listing-item-title-centralizer {
     position: absolute;
     z-index: 100;
@@ -507,26 +469,7 @@ h4 {
     padding-left: 15px;
     padding-right: 15px;
 }
-.listing-item .ribbon {
-    position: relative;
-    margin-left: 15px;
-    margin-right: 15px;
-}
 
-.ribbon {
-    color: #fff;
-    background: rgb(38,163,135);
-    position: relative;
-    z-index: 600;
-    height: 22px;
-    margin-top: 6px;
-    padding: 2px 5px 0 5px;
-    font-family: 'Roboto';
-    font-size: 14px;
-    display: inline-block;
-    white-space: nowrap;
-    text-align: center;
-}
 
 .listing-item-data {
     margin-top: 30px;
@@ -550,12 +493,7 @@ h4 {
     width: 100%;
     text-align: center;
 }
-.listing-item-link img {
-    width: 100%;
-    display: inline-block;
-    border-radius: 50%;
-   
-}
+
 
 .listing-item-excerpt {
     text-shadow: 0 0 6px rgba(0,0,0,0.7);
@@ -580,11 +518,33 @@ h4 {
 
 
 
-@media screen and (min-width: 768px){
-	.col-sm-3 {
-    width: 24.98%;
-	}
-}
+        @media screen and (min-width: 981px) {
+                   .listing .col-sm-3{
+                        width:25%  !important;
+                        text-align: center;
+                    }
+                }
+
+ @media screen and (min-width: 768px) and (max-width: 980px) { 
+                   .listing .col-sm-3{
+                        width:50%  !important;
+                         text-align: center;
+                    }
+                }
+     @media  screen and (max-width: 767px) {
+                   .listing .col-sm-3{
+                        padding-left: 50px;
+                        width:100%  !important;
+                         text-align: center;
+                    }
+                  .row-title h1{
+                    font-size: 25px;
+                        
+             }
+                  }
+          
+
+
 
 }
 // raiting trending @extend ;-------------------------------------------------------------------------------------------
@@ -797,43 +757,6 @@ h4 {
 }
 // how it work end---------------------------------------------------------------------------------
 
-#go{
-
-    .app:after {
-    bottom: auto;
-    top: -18px;
-    height: 18px;
-}
- .app:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 8px;
-    background: url(../img/wave.png) top center;
-    z-index: 4;
-}
-
-.container-fluid {
-    position: relative;
-}
-
-.container-fluid {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-
-}
-
-
-
-
-
-
 // section trending yeniler begin
 #yeniler{ 
 
@@ -852,24 +775,7 @@ h4 {
             border-bottom: 1px dashed rgba(160,160,160,0.4);
             padding-bottom: 18px;
             width: 100%;
-            left: 65px;
-            padding-right: 130px;
         }
-
-         h1:before {
-            font-family: 'icon';
-            content: "\e91c";
-            position: absolute;
-            top: 100%;
-            left: -65px;
-            margin-top: -28px;
-            font-size: 45px;
-            width: 60px;
-            padding-right: 16px;
-            text-align: center;
-            border-right: 1px dashed rgb(38,163,135);
-        }
-
          h4 {
             color: #555555;
             position: relative;
@@ -1069,6 +975,39 @@ h4 {
     }
 }
 
+
+        @media screen and (min-width: 981px) {
+                   .listing .col-sm-3{
+                        width:25%  !important;
+                        text-align: center;
+                    }
+                }
+
+ @media screen and (min-width: 768px) and (max-width: 980px) { 
+                   .listing .col-sm-3{
+                        width:50%  !important;
+                         text-align: center;
+                    }
+                }
+     @media  screen and (max-width: 767px) {
+                   .listing .col-sm-3{
+                        width:100%  !important;
+                         text-align: center;
+                    }
+                  .row-title h1{
+                    font-size: 20px;
+                  }
+                        
+             }
+             @media  screen and  (min-width: 980px) and (max-width: 1119px) {
+                   .category-icon{
+                       
+                        margin-left: -25px;
+                         
+                    }
+                        
+             }
+         
 
 }
 // section trending yeniler end=--------------------------------------------------------------------------------------------
