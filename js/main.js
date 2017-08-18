@@ -1,15 +1,18 @@
   //id reating------------------
 
 
- //   $(".listing-item").hover(function(){
- //       $(".listing-item-rating").fadeOut();
- //       $(".category-icon ").fadeOut();
-	// $(".listing-black-overlay").fadeOut();
- //        }, function(){
- //        $(".listing-item-rating").fadeIn();
- //       $(".category-icon ").fadeIn();
-	//    $(".listing-black-overlay").fadeIn();
- //    });
+   // $(".listing-item-link").hover(function(){
+   //     $( ".listing-item-rating").animate({top: '0px'}).fadeOut();
+   //     $( ".category-icon ").animate({top: '-20px'}).fadeOut();
+	  //    $(".listing-item-date").animate({top: '-20px'}).fadeOut();
+   //      });
+
+   //      $(".listing-item-link").mouseout( function(){
+   //    $(".listing-item-rating").fadeIn().animate({top: '12%'});
+   //     $(".category-icon ").fadeIn().animate({top: '0px'});
+   //     $( ".listing-item-date").fadeIn().animate({top: '0px'});
+	  
+   //  });
 
 //id reating end---------------
 
@@ -25,7 +28,8 @@
   
 $("html,body").animate({
 	scrollTop:0
-},800);
+},1000);
 
    });
 //scroll home page end-------------------------
+
