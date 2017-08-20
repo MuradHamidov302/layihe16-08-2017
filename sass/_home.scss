@@ -284,7 +284,7 @@
 }
 
 
-.listing-item .listing-item-link:before, .listing-item-rating {
+.listing-item-link:before, .listing-item-rating {
     font-family: "FontAwesome";
     content: "\f0e7";
     position: absolute;
@@ -319,13 +319,6 @@
     margin-right: -0.25em;
 }
 
-.cat-text, .cat-icon, .cat-image img, .listing-item .category-icon, .listing-item-author, .how-item h3 {
-    -webkit-transition: 1s -webkit-transform;
-    -moz-transition: 1s -moz-transform;
-    -ms-transition: 1s -moz-transform;
-    -o-transition: 1s -o-transform;
-    transition: 1s transform;
-}
 .listing-item{
      .listing-item-link,.listing-item-link img {
     width: 100%;
@@ -339,14 +332,15 @@
     border-image: initial;
 }
 }
-
-
-
+.listing-item-link:hover:before{
+    display: none;
+}
 .listing-item-link{
-      transition: 2s transform;
+      transition: 1s transform;
     transform: scale(0.91);
   background:#333;
   &:hover{
+
           transform: scale(1);
             background-image: url("../img/spiral.gif"); 
              background-position: center center;
@@ -401,9 +395,9 @@
     box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.10), -2px -2px 5px 0 rgba(0,0,0,0.10);
     border-radius: 50%;
     z-index: 400;
-    margin-left: 36px;
-    margin-top: 26px;
- transition: 2s transform;
+    margin-left: 41px;
+    margin-top: 25px;
+ transition:all .5s ;
      &:hover{
         transform: rotate(-45deg) scale(0.9); opacity: 1;
         color: white;
@@ -434,7 +428,7 @@
     font-family: 'Capriola', sans-serif;
     font-size: 15px;
     background: rgb(38,163,135);
-     transition:  1s transform;
+     transition: all .5s !important ;
 }
 
 .listing-item-data:before {
@@ -504,17 +498,6 @@
 
 .listing-item-data {
     margin-top: 30px;
-}
-
-.listing-item-data:before {
-    font-family: "FontAwesome";
-    content: "\f041";
-    position: relative;
-    display: block;
-    width: 100%;
-    margin-top: -35px;
-    font-size: 22px;
-    color: #fff;
 }
 
 .listing-item-address {
@@ -828,7 +811,7 @@
     margin-bottom: 60px; 
 }
 .category-icon {
-    transition:  1s transform;
+    transition: all .5s !important ;
     color: rgb(38,163,135);
      position: absolute;
     left: 42px;
@@ -873,7 +856,7 @@
     color: rgb(38,163,135);
     border-radius: 50%;
     border: 0 solid #ccc;
-    transition: 2s transform;
+    transition: all .5s !important;
     z-index: 50;
         .month {
             font-size: 12px;
@@ -942,11 +925,10 @@
     transform: scale(0.92);
 }
 
-
 .listing-item-link{
     overflow: hidden;
     display: inline-block;
-      transition: 2s transform;
+      transition: 1s transform;
     transform: scale(0.91);
            &:hover{
            transform: scale(1);
@@ -959,7 +941,9 @@
     height: 100%;
     position: absolute;
          }
-       }
+        
+       } 
+
 
     .listing-black-overlay {
         position: absolute;
