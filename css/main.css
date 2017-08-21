@@ -2193,7 +2193,7 @@ header .full-dimming-overlay {
   left: 0;
   width: 100%;
   height: 8px;
-  background: url(../images/miscellaneous/wave.png) top center;
+  background: url(../img/wave.png) top center;
   z-index: 4;
 }
 #page-header .listing-block {
