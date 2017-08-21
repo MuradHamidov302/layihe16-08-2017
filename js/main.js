@@ -5,13 +5,16 @@
    $(this).parent().children(".listing-item-date").animate({top: '-20px',opacity:'0'},50);
    $(this).parent().children(".category-icon ").animate({top: '-20px',opacity:'0'},50);
    $(this).parent().children(".listing-item-rating ").animate({top: '20px',opacity:'0'},50);
+    $(this).parent().children(".listing-item-author  ").animate({top: '104px',opacity:'0'},50);
 
  }, function () {
          
       $(this).parent().children(".listing-item-date").animate({top: '0px',opacity:'1'},50);
        $(this).parent().children("#reyting .category-icon ").animate({top: '0px',opacity:'1'},50);
+        $(this).parent().children("#left-content .category-icon ").animate({top: '25px',opacity:'1'},50);
        $(this).parent().children("#yeniler .category-icon ").animate({top: '11px',opacity:'1'},50);
         $(this).parent().children(".listing-item-rating ").animate({top: '12%',opacity:'1'},50);
+         $(this).parent().children(".listing-item-author  ").animate({top: '84px',opacity:'1'},50);
         });
      
 //id reating end---------------
