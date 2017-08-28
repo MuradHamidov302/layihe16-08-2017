@@ -40,7 +40,7 @@
 }
 
 .breadcrumbs a {
-    font-family: 'Capriola', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #fff;
     font-size: 14px;
     text-shadow: 0 0 6px rgba(0,0,0,0.7);
@@ -91,7 +91,7 @@ a, a:hover, a:focus {
 }
 
 h1,h4{
-    font-family: 'Capriola', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: rgb(38,163,135);
     text-align: center;
 }
@@ -164,7 +164,7 @@ h1,h4{
 .results-count {
     text-align: left;
     font-size: 15px;
-    font-family: 'Capriola', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: rgb(38,163,135);
     padding-left: 0;
     display: inline-block;
@@ -239,8 +239,8 @@ span {
     box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.10), -2px -2px 5px 0 rgba(0,0,0,0.10);
     border-radius: 50%;
     z-index: 15;
-    top: 12%;
-    left: 30%;
+    top: 20px !important;
+    left: -5px !important;
     margin-left: -36px;
     margin-top: -26px;
       &:hover{
@@ -270,7 +270,7 @@ a, a:hover, a:focus {
 }
 
 .listing.grid2 .listing-item-link {
-    border-radius: 65px 0 0 65px;
+    border-radius: 8px 0 0 8px;
     width: 100%;
     text-align: left;
 }
@@ -294,7 +294,7 @@ a, a:hover, a:focus {
 .listing-item .listing-item-link, .listing-item .listing-item-link img {
     width: 100%;
     display: inline-block;
-    border-radius: 50%;
+    border-radius: 8px;
 }
 
 .listing-item-excerpt{
@@ -334,7 +334,7 @@ height: 50px !important;
     text-align: center;
     padding: 0 15px 8px 15px;
     overflow: visible;
-    border-radius: 50%;
+    border-radius:8px;
     font-size: 0;
 }
 .listing-item-title-centralizer:before {
@@ -368,7 +368,7 @@ height: 50px !important;
     font-size: 15px;
     letter-spacing: 1px;
     color: #fff;
-    font-family: 'Capriola', sans-serif;
+    font-family: 'Roboto', sans-serif;
     white-space: pre-line;
     padding-left: 15px;
     padding-right: 15px;
@@ -441,7 +441,7 @@ height: 50px !important;
 .listing-item .listing-item-link img {
     width: 100%;
     display: inline-block;
-    border-radius: 50%;
+    border-radius: 8px;
 }
 
 img {
@@ -464,7 +464,7 @@ img {
 .listing-black-overlay {
     position: absolute;
     display: block;
-    border-radius: 50%;
+    border-radius:8px;
     top: 0;
     left: 0;
     width: 100%;

@@ -1,4 +1,5 @@
 #category{
+
 		.row-title h4 {
 				    color: #555555;
 				    position: relative;
@@ -6,7 +7,7 @@
 				    padding-top: 15px;
 				    line-height: 30px;
 				    display: inline-block;
-				    border-top: 1px dashed rgb(38,163,135);
+				   // border-top: 1px dashed rgb(38,163,135);
 				    opacity: 0.6;
 				}
 
@@ -256,7 +257,7 @@
             padding-top: 15px;
             line-height: 30px;
             display: inline-block;
-            border-top: 1px dashed rgb(38,163,135);
+           // border-top: 1px dashed rgb(38,163,135);
             opacity: 0.6;
              color: rgba(255,255,255,0.9);
         }
@@ -284,7 +285,8 @@
 }
 
 
-.listing-item-link:before, .listing-item-rating {
+//.listing-item-link:before,
+ .listing-item-rating {
     font-family: "FontAwesome";
     content: "\f0e7";
     position: absolute;
@@ -336,6 +338,7 @@
     display: none;
 }
 .listing-item-link{
+
       transition: 1s transform;
     transform: scale(0.91);
   background:#333;
@@ -345,7 +348,9 @@
             background-image: url("../img/spiral.gif"); 
              background-position: center center;
          background-size: cover;
-
+  .listing-item-title, .listing-black-overlay{
+  display: none;
+  }
          .reng{  
             border-radius: 50%;
             opacity: 0.5;
@@ -406,7 +411,13 @@
 }
 
 
+.item{
+  padding-top: 50px;
+  .col-sm-12{
+    text-align: center !important;
+  }
 
+}
 .listing-item {
     width: 100%;
     max-width: 320px;
@@ -419,8 +430,8 @@
     top: 12%;
     left: auto;
     right: 26%;
-    margin-right: -20px;
-    margin-top: -20px;
+margin-right: -24px;
+    margin-top: -7px;
     width: 32px;
     height: 32px;
     line-height: 22px;
@@ -431,19 +442,10 @@
      transition: all .5s !important ;
 }
 
-.listing-item-data:before {
-    font-family: "FontAwesome";
-    content: "\f041";
-    position: relative;
-    display: block;
-    width: 100%;
-    margin-top: -35px;
-    font-size: 22px;
-    color: #fff;
-}
+
 
 .listing-item-address {
-    font-family: 'Capriola', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 13px;
     padding-bottom: 4px;
     width: 100%;
@@ -489,7 +491,7 @@
     font-size: 15px;
     letter-spacing: 1px;
     color: #fff;
-    font-family: 'Capriola', sans-serif;
+    font-family: 'Roboto', sans-serif;
     white-space: pre-line;
     padding-left: 15px;
     padding-right: 15px;
@@ -501,7 +503,7 @@
 }
 
 .listing-item-address {
-    font-family: 'Capriola', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 13px;
     padding-bottom: 4px;
     width: 100%;
@@ -612,7 +614,7 @@
 
 
   .how{
-        position: relative;
+           position: relative;
             text-align: center;
             padding-bottom: 100px;
             box-shadow: 0 10000px rgb(38,163,135) inset;
@@ -696,7 +698,8 @@
                     line-height: 1.42857143;
 
         .how-item{
-          transition: all 1s;
+          transition: all 0.5s;
+          overflow: hidden;
           border: 1px solid transparent;
                     border-top: 2px solid transparent;
                     margin-top: 40px;
@@ -712,6 +715,7 @@
                         }
                              .how-item-title{
                                  transform: scale(1.2);
+                                 transition:0.5s all ease;
 
                              }
                              .how-item-excerpt{
@@ -726,7 +730,7 @@
             text-decoration: none;
             background-color: transparent;
                 text-align: center;
-                transition-duration: 1s;
+                transition-duration: 0.4;
                 transition-property: transform;
                 img{
                   transition: all 2s;
@@ -800,7 +804,7 @@
             padding-top: 15px;
             line-height: 30px;
             display: inline-block;
-            border-top: 1px dashed rgb(38,163,135);
+           // border-top: 1px dashed rgb(38,163,135);
             opacity: 0.6;
         }
 }
@@ -850,7 +854,8 @@
     top: -5px;
     left: 50%;
     margin-left: -25px;
-    width: 50px;
+    width: 50px; 
+    height: 50px;
     padding: 6px 0 6px 0;
     text-align: center;
     font-size: 16px;
@@ -884,19 +889,12 @@
     border-radius: 50%;
     font-size: 0;
 }
-.listing-item-title-centralizer {
-    position: absolute;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    padding: 0 15px 8px 15px;
-    overflow: visible;
-    border-radius: 50%;
-    font-size: 0;
+.item{
+  padding-top: 50px;
+  .col-sm-12{
+    text-align: center !important;
+  }
+
 }
 
 .listing-item-title-centralizer:before {
@@ -938,6 +936,9 @@
             background-image: url("../img/spiral.gif"); 
              background-position: center center;
          background-size: cover;
+         .listing-item-title, .listing-black-overlay{
+  display: none;
+  }
 .reng{  opacity: 0.5;
             background:#2AA589;
     width: 100%;
@@ -946,7 +947,6 @@
          }
         
        } 
-
 
     .listing-black-overlay {
         position: absolute;
@@ -977,6 +977,35 @@
     border-color: initial;
     border-image: initial;
 }
+
+.listing-item-data{
+  p{
+    color: #2AA589;
+  }
+  text-align: center;
+  i{
+     cursor: pointer;
+     color: #2AA589;  transition: .5s transform;
+     &:hover{
+       transform: rotateX(360deg) scale(1.2);
+     }
+  }
+  .fa-heart-o:before {
+    content: "\f08a";
+
+   } 
+   .fa-heart-o:hover:before {
+   
+    content: "\f004";
+   } 
+   .fa-square-o:before {
+    content: "\f096";
+}
+ .fa-square-o:hover:before {
+     content: "\f046";
+}
+}   
+ 
 
 
 

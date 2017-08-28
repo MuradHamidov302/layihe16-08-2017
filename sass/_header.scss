@@ -1,4 +1,13 @@
+@media(max-width:768px){
+  #slidemenu{
+    display: none;
+  }
+  .navbar-toggle{
+    margin-right: 2em !important; 
+  }
+}
 header{
+
         position: absolute;
         background: none;
         box-shadow: none;
@@ -13,125 +22,6 @@ header{
         font-weight: normal;
         font-size: 15px;
         line-height: 1.42857143;
-        .logo{
-            top: 5px;
-            left: 5px;
-            position: absolute;
-            a{
-                    opacity: 1;
-                    position: relative;
-                    display: inline-block;
-                    background-color: transparent;
-                    :hover{
-                        text-decoration: none;
-                        color: rgb(38,163,135);
-                    }
-                    :before {
-                      content: "";
-                      position: absolute;
-                      top: 10px;
-                      left: 12px;
-                      z-index: -5;
-                      background-color: rgb(38,163,135);
-                      display: block;
-                      width: 60%;
-                      height: 66%;
-                      border-radius: 15px;
-                  }
-                img{
-                   max-height: 48px;
-                   max-width: 9999px;
-                   vertical-align: middle;
-                   border: 0;
-                   :hover, :focus {
-                             text-decoration: none;
-                             color: rgb(38,163,135);
-                          }   
-                          :after {
-                                 content: "";
-                                 position: absolute;
-                                 top: 10px;
-                                 right: 16px;
-                                 z-index: -5;
-                                 background-color: rgb(38,163,135);
-                                 display: block;
-                                 width: 60%;
-                                 height: 66%;
-                                 border-radius: 15px;
-                             }                      
-                }
-            }
-        }
-        .user-buttons{
-                background: transparent;
-                padding: 0;
-                position: relative;
-                float: right;
-                top: 0;
-                right: 0;
-                height: 60px;
-                border-radius: 0;
-                margin-left: 3px;
-                z-index: 5000;
-                .user-login{
-                    transition: all 1s;
-                    position: relative;
-                    float: left;
-                    text-align: center;
-                    top: 0;
-                    height: 100%;
-                    padding-right: 15px;
-                    padding-left: 21px;
-                    display: inline-block;
-                    :hover,:focus{
-                            text-decoration: none;
-                            color: rgb(38,163,135);
-                    }
-                    :before {
-                             font-family: 'icon';
-                             content: "\ea1e";
-                             display: block;
-                             font-size: 20px;
-                             color: #fff;
-                             position: relative;
-                             width: 100%;
-                             top: 16px;
-                             left: -2px;
-                         }
-                }
-                .add-listing{
-                       transition: all 1s;
-                       background: none;
-                       box-shadow: none;
-                       transform: scale(1);
-                       position: relative;
-                       display: inline-block;
-                       overflow: hidden;
-                       line-height: 12px;
-                       font-family: 'Capriola', sans-serif;
-                       font-size: 16px;
-                       margin-left: 0;
-                       white-space: nowrap;
-                       height: 100%;
-                       padding: 26px 23px 0 54px;
-                       color: #fff;
-                       border-radius: 0;
-                       border-left: 1px dashed rgba(255,255,255,0.5);
-                       min-height: 50px;
-                       margin-bottom: 20px;
-                       border: 1px solid transparent;
-                       :hover,:focus{
-                        text-decoration: none;
-                       }
-                       :before {
-                                 font-family: 'icon';
-                                 content: "\ea7c";
-                                 position: absolute;
-                                 font-size: 25px;
-                                 left: 12px;
-                             }
-                }
-        }
         #slide-nav{
             position: relative;
             float: right;
@@ -226,8 +116,7 @@ header{
                           list-style: none;
                           color: #202020;
                           font-weight: normal;
-                            @media (min-width: 768px)
-                            {
+                            @media (min-width: 768px){
                                  float: right!important;
                                  margin-right: -15px;
                                  margin:0;
@@ -261,7 +150,7 @@ header{
                                         transition: all 1s;
                                         font-family: "Roboto";
                                         font-size: 16px;
-                                        text-shadow: 0 0 6px rgba(0,0,0,0.3);
+                                       // text-shadow: 0 0 6px rgba(0,0,0,0.3);
                                         color: #fff;
                                         padding-top: 20px;
                                         padding-bottom: 20px;
@@ -332,8 +221,7 @@ header{
                                            :hover{
                                             text-decoration: none;
                                            }
-                                       @media (min-width: 768px)
-                                               {
+                                       @media (min-width: 768px){
                                                   padding: 5px 20px;
                                                  background-color: transparent !important;
                                               }
@@ -348,794 +236,245 @@ header{
         #navbar-height-col{
                 left: -300px;
         }
-        .full-dimming-overlay{
-                opacity: 0;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgb(38,163,135);
-                z-index: 9997;
-                @media (min-width: 768px){
-                    display: none !important;
-                }
-        }
+        
 }
-// popup begin
-.login-popup{ 
-              height: 574px;
-              position: fixed;
-              width: 100%;
-              top: -30000px;
-              left: -200%;
-              z-index: 999;
-              opacity: 0.99;
-              min-height: 460px;
-              padding: 0;
-              margin-right: auto;
-              margin-left: auto;
-              :after {
-                   content: "";
-                   position: absolute;
-                   bottom: 0;
-                   left: 0;
-                   width: 100%;
-                   height: 8px;
-                   background: url(http://webdesigntrade.net/city-listing/images/miscellaneous/wave.png) top center;
-                   z-index: 4;
-                 }
-       .back-site{
-        transition: all 1s;
+// Video slider section begin
+.hero-header{
+          height: 791px;
+          padding: 0;
+          z-index: 0;
+          background-color: transparent !important;
+          position: relative;
+  .hero-video{
         position: absolute;
-        top: 70px;
-        left: 16px;
-        display: inline-block;
-        color: #fff;
-        cursor: pointer;
-        font-size: 30px;
-        z-index: 1010;
-        :before{
-                font-family: 'icon' !important;
-                speak: none;
-                font-style: normal;
-                font-weight: normal;
-                font-variant: normal;
-                text-transform: none;
-                line-height: 1;
-                -webkit-font-smoothing: antialiased;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    iframe{
+           width: 1588px;
+           height: 895.437px;
+           position: absolute;
+           bottom: 50%;
+           left: 50%;
+           z-index: -2;
+           transform: translate(-50%, 50%);
+           border-top-width: 0px;
+           border-right-width: 0px;
+           border-bottom-width: 0px;
+           border-left-width: 0px;
+    }
+  }
+}
+// video slider section end
+.hero-search{
+    left: 15%;
+    top: 20em;
+    position: absolute;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 5px 0 5px;
+    height: 78px;
+    text-align: center;
+    z-index: 10;
+    box-shadow: -8px -8px 0px rgb(38,163,135), 0 0 30px rgba(0,0,0,0.15);
+    white-space: normal;
+    font-size: 14px;
+     form{
+          position: relative;
+          text-align: center;
+          white-space: nowrap;
+          display: table;
+          width: 100%;
+      fieldset{
+            min-width: 0;
+            padding: 0;
+            margin: 0;
+            border: 0;
+            text-align: center;
+            white-space: nowrap;
+        input{
+          padding-left: 10px;
+          height: 50px;
+          border: 0.5px solid #3ED0A9;
+          position: relative;
+          color: rgb(38,163,135);
+          font-size: 18px;
+          letter-spacing: 1px;
+          z-index: 1;
+          background: transparent;
+          box-shadow: none;
+          display: block;
+          width: 100%;
+          padding: 6px 12px;
+          border-radius: 4px;
+          transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+          margin: 0;
+          word-spacing: normal;
+          text-transform: none;
+          text-indent: 0px;
+          text-shadow: none;
+          white-space: nowrap;
         }
-       }
-       .dot-overlay{
-            background: url(http://webdesigntrade.net/city-listing/images/miscellaneous/dot-overlay.png);
-            height: 99.99%;
+        span{
+          float: left;
+          top: -52px;
+          left: 0;
+          z-index: 0;
+          font-weight: normal;
+          text-align: left;
+          padding-top: 17px;
+          padding-left: 58px;
+          padding-left: 10px;
+          height: 50px;
+          border: 0;
+          position: relative;
+          color: rgb(38,163,135);
+          font-size: 18px;
+          letter-spacing: 1px;
+           background: transparent;
+           box-shadow: none;
+        }
+      }
+      .search-cities-toggle{
+            transition: all 200ms ease-in;
             position: absolute;
             top: 0;
-            left: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-       }
-       .overlay{
-        background-color: rgba(38,163,135,0.85);
-        height: 99.99%;
-        background: rgba(38,163,135,0.8);
-         position: absolute;
-         top: 0;
-         left: 0;
-         padding: 0;
-         width: 100%;
-       }
-       .hero-image{
-        background-image: url(http://webdesigntrade.net/city-listing/images/backgrounds/10.jpg);
-        position: absolute;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        background-position: center center;
-        background-size: cover;
-        background-color: #000;
-       }      
-       .row{
-            width: 100%;
-            position: relative;
-            display: table;
+            margin-top: -59px;
+            right: -8px;
+            background: rgb(38,163,135);
+            color: #fff;
+            width: 56px;
+            height: 44px;
             text-align: center;
-            margin:0;
-            .text-center{
-                height: 319px;
-                margin-top: 60px;
-                overflow-y: auto;
-                position: relative;
-                min-height: 1px;
-                padding-right: 15px;
-                padding-left: 15px;
-                text-align: center;
-                @media (min-width: 768px)
-                  {
-                     width: 100%;
-                     float: left;
-                 }
-                 .panel{
-                        display: inline-block;
-                        top: 0px;
-                        margin-top: 55px;
-                        opacity: 1;
-                        position: relative;
-                        border-color: #ccc;
-                        box-shadow: 0 2px 3px 0 rgba(0,0,0,0.2);
-                        width: 260px;
-                        max-width: 100%;
-                        margin-bottom: 20px;
-                        background-color: #fff;
-                        border: 1px solid transparent;
-                        border-radius: 4px;
-                        .panel-heading{
-                                color: rgb(38,163,135);
-                                background-color: #fff;
-                                border-color: #fff;
-                                text-align: center;
-                                padding: 10px 15px;
-                                border-bottom: 1px solid transparent;
-                                border-top-left-radius: 3px;
-                                border-top-right-radius: 3px;
-                                .row{
-                                    margin:0;
-                                    .col-xs-6{
-                                        width: 50%;
-                                        float: left;
-                                        position: relative;
-                                        min-height: 1px;
-                                        padding-right: 15px;
-                                        padding-left: 15px;
-                                        #login-form-link{
-                                            color: rgb(38,163,135);
-                                            font-size: 18px;
-                                            transition: all 0.1s ease;
-                                            display: inline-block;
-                                            height: 50px;
-                                            line-height: 50px;
-                                            text-decoration: none;
+            padding-top: 6px;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 26px;
+            box-shadow: 0px -20px 20px rgba(0,0,0,0.2) inset, 0 0 120px rgba(255,255,255,0.75);
+           i{
+            color:white;
+           }
+      }
 
-                                        }
-                                        #register-form-link{
-                                                transition: all 0.1s ease;
-                                                text-decoration: none;
-                                                color: #aaa;
-                                                font-size: 15px;
-                                                display: inline-block;
-                                                height: 50px;
-                                                line-height: 50px;
-                                        }
-                                    }
-                                }
-                        }
-                        .panel-body{
-                                padding: 15px;
-                                text-align: center;
-                                .row{
-                                    .col-lg-12{
-                                        position: relative;
-                                        min-height: 1px;
-                                        padding-right: 15px;
-                                        padding-left: 15px;
-                                        #login-form{
-                                            margin-top: 0em;
-                                            .form-group{
-                                                    margin-bottom: 15px;
-                                                #login-username{
-                                                        transition: all 0.1s ease;
-                                                        height: 45px;
-                                                         border: 1px solid #ddd;
-                                                         font-size: 14px;
-                                                         display: block;
-                                                         width: 100%;
-                                                         padding: 6px 12px;
-                                                         color: #555;
-                                                         background-color: #fff;
-                                                         background-image: none;
-                                                         box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-                                                }
-                                                #login-password{
-                                                    transition: all 0.1s ease;
-                                                    height: 45px;
-                                                    border: 1px solid #ddd;
-                                                    font-size: 14px;
-                                                    width: 100%;
-                                                    color: #555;
-                                                    background-color: #fff;
-                                                    background-image: none;
-                                                    padding: 6px 12px;
-                                                    border-radius: 4px;
-                                                    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-                                                }
-                                                #remember{
-                                                        position: relative;
-                                                        top: 2px;
-                                                        margin: 4px 0 0;
-                                                        line-height: normal;
-                                                        padding:0;
-                                                        letter-spacing: normal;
-                                                        word-spacing: normal;
-                                                        text-transform: none;
-                                                        text-indent: 0px;
-                                                        text-shadow: none;
-                                                        display: inline-block;
-                                                        text-align: start;
-                                                }
-                                                label{
-                                                        display: inline-block;
-                                                        max-width: 100%;
-                                                        margin-bottom: 5px;
-                                                }
-                                                #login-submit{
-                                                    background-color: rgb(38,163,135);
-                                                    outline: none;
-                                                    color: #fff;
-                                                    height: auto;
-                                                    font-weight: normal;
-                                                    padding: 14px 0;
-                                                    text-transform: uppercase;
-                                                    border-color: rgb(38,163,135);
-                                                    margin-bottom: 0;
-                                                    line-height: 1.42857143;
-                                                    text-align: center;
-                                                    white-space: nowrap;
-                                                    vertical-align: middle;
-                                                    user-select: none;
-                                                    background-image: none;
-                                                    border: 1px solid transparent;
-                                                    border-radius: 4px;
-                                                }
-                                                .row{
-                                                    color: #202020;
-                                                    font-weight: normal;
-                                                    font-size: 15px;
-                                                    .col-lg-12{
-                                                        position: relative;
-                                                        min-height: 1px;
-                                                        padding-right: 15px;
-                                                        padding-left: 15px;
-                                                        @media (min-width: 1200px){
-                                                            float: left;
-                                                        }
-                                                        .text-center{
-                                                            a{
-                                                                :hover{
-                                                                    text-decoration: none;
-                                                                    color: rgb(38,163,135);
-                                                                    font-weight: normal;
-                                                                    font-size: 15px;
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                            .text-center{}
-                                        }
-                                        #register-form{
-                                            margin-top: 0em;
-                                            .form-group{
-                                                margin-bottom: 15px;
-                                                #register-username{
-                                                     transition: all 0.1s ease;
-                                                     height: 45px;
-                                                     border: 1px solid #ddd;
-                                                     font-size: 14px;
-                                                     background-color: #fff;
-                                                     background-image: none;
-                                                     width:100%;
-                                                     box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-
-                                                }
-                                                #register-email{
-                                                    padding: 6px 12px;
-                                                   line-height: 1.42857143;
-                                                   color: #555;
-                                                   background-color: #fff;
-                                                   background-image: none;
-                                                   border-radius: 4px;
-                                                    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-                                                }
-                                                #register-password,#confirm-password{
-                                                        height: 45px;
-                                                        border: 1px solid #ddd;
-                                                        font-size: 14px;
-                                                        padding: 6px 12px;
-                                                        color: #555;
-                                                        background-color: #fff;
-                                                        background-image: none;
-                                                         box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-                                                }
-                                                #register-submit{
-                                                    background-color: rgb(38,163,135);
-                                                    outline: none;
-                                                    color: #fff;
-                                                    height: auto;
-                                                    font-weight: normal;
-                                                    padding: 14px 0;
-                                                    text-transform: uppercase;
-                                                    border-color: rgb(38,163,135);
-                                                    margin-bottom: 0;
-                                                    display: inline-block;
-                                                    line-height: 1.42857143;
-                                                    text-align: center;
-                                                    white-space: nowrap;
-                                                    vertical-align: middle;
-                                                    touch-action: manipulation;
-                                                   user-select: none;
-                                                   background-image: none;
-                                                   border: 1px solid transparent;
-                                                   border-radius: 4px;
-                                                   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                        }
-                 }
-            }
-       }    
-}
-// popup end
-// hero video begin
-.h-video{
-      height: 574px;
-      min-height: 460px;
-      padding: 0;
-      z-index: 0;
-      background-color: transparent !important;
-      position: relative;
-      margin-left:auto;
-      margin-right:auto;
-      :after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 8px;
-    background: url(../images/miscellaneous/wave.png) top center;
-    z-index: 4;
-}
-     .hero-video{
-        opacity: 1;
+      .search-submit{
         position: absolute;
-        top: 0;
-        left: 0;
+        width: 50px;
         height: 100%;
-        width: 100%;
-        overflow: hidden;
-        .fullvid{
-                width: 1348px;
-                height: 760.437px;
-                position: absolute;
-                bottom: 50%;
-                left: 50%;
-                z-index: -2;
-                transform: translate(-50%, 50%);
-                border-top-width: 0px;
-                border-right-width: 0px;
-                border-bottom-width: 0px;
-                border-left-width: 0px;
-                border-style: inset;
-                border-color: initial;
-                border-image: initial;
-                #player{
-                       width: 100%;
-                       height: 100%;
-                       margin: 0;
-                       padding: 0;
-                       background-color: #000;
-                       overflow: hidden;
-                       line-height: normal;
-                       border-collapse: separate;
-                       user-select: none;
-                }
+        border: 0;
+        text-align: right;
+        top: 0;
+        right: -5px;
+        vertical-align: top;
+        font-size: 18px;
+        font-weight: 700;
+        border-radius: 5px;
+        z-index: 12;
+        transition:all ease 0.5s;
+              &:hover{
+                transform:rotate(360deg)!important;
+              }
+
+        input{
+              background-color: transparent;
+              width: 100%;
+              height: 100%;
+              border: 0;
+              padding-left: 10px;
+              position: relative;
+              color: rgb(38,163,135);
+              font-size: 18px;
+              letter-spacing: 1px;
+              z-index: 1;
+              background: transparent;
+              box-shadow: none;
         }
-     }
-     .dot-overlay{
-        background: url(http://webdesigntrade.net/city-listing/images/miscellaneous/dot-overlay.png);
-        height: 99.99%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: 0;
-        width: 100%;
-     }
-     .overlay{
-        background: rgba(0,0,0,0.4) !important;
-        display: block;
-        height: 99.99%;
-        position: absolute;
-         top: 0;
-         left: 0;
-         padding: 0;
-         width: 100%;
-     }
-     .hero-image{
-        display: none !important;
-        background-image: url(http://webdesigntrade.net/city-listing/images/backgrounds/3.jpg);
-        position: absolute;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        background-position: center center;
-        background-size: cover;
-        background-color: #000;
-     }
-     .header-centralizer{
-        position: relative;
-        text-align: center;
-        white-space: nowrap;
-        font-size: 0;
-        z-index: 3;
-        top: 0;
-        left: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-        :before {
-                 content: '';
-                 display: inline-block;
-                 height: 100%;
-                 vertical-align: middle;
-            }  
-            .content-centralized{
-                margin-top: 11em;
-                width: 100%;
-                top: 20px;
-                display: inline-block;
-                vertical-align: middle;
-                white-space: normal;
-                font-size: 14px;
-                .hero-search{
-                    width: 1074.36px;
-                    left: 134.3px;
-                    margin-top: 40px;
-                    display: block;
-                    padding: 15px;
-                    background-color: #fff;
-                    border-radius: 5px 0 5px;
-                    height: 78px;
-                    text-align: center;
-                    z-index: 10;
-                    box-shadow: -8px -8px 0px rgb(38,163,135), 0 0 30px rgba(0,0,0,0.15);
-                    position: relative;
-                    form{
-                        position: relative;
-                        text-align: center;
-                        white-space: nowrap;
-                        display: table;
-                        width: 100%;
-                        margin-top: 0em;
-                        fieldset{
-                            position: relative;
-                            display: table-cell;
-                            min-width: 0;
-                            padding: 0;
-                            margin: 0;
-                            border: 0;
-                            .form-control{
-                                padding-left: 10px;
-                                height: 50px;
-                                border: 0;
-                                position: relative;
-                                color: rgb(38,163,135);
-                                font-size: 18px;
-                                letter-spacing: 1px;
-                                z-index: 1;
-                                background: transparent;
-                                box-shadow: none;
-                                display: block;
-                                width: 100%;
-                                padding: 6px 12px;
-                                border-radius: 4px;
-                                transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-                                word-spacing: normal;
-                                text-transform: none;
-                                text-indent: 0px;
-                                text-shadow: none;
-                                text-rendering: auto;
-
-                            }
-                            .typingEffect{
-                                float: left;
-                                top: -52px;
-                                left: 0;
-                                z-index: 0;
-                                font-weight: normal;
-                                text-align: left;
-                                padding-top: 17px;
-                                padding-left: 58px;
-                                height: 50px;
-                                border: 0;
-                                position: relative;
-                                color: rgb(38,163,135);
-                                font-size: 18px;
-                                letter-spacing: 1px;
-                                background: transparent;
-                                box-shadow: none;
-                            }
-                        }
-                        .search-cities-toggle{
-                            opacity: 1;
-                            transition: all 200ms ease-in;
-                            position: absolute;
-                            top: 0;
-                            margin-top: -59px;
-                            right: -8px;
-                            background: rgb(38,163,135);
-                            color: #fff;
-                            width: 56px;
-                            height: 44px;
-                            text-align: center;
-                            padding-top: 6px;
-                            border-radius: 6px 6px 0 0;
-                            cursor: pointer;
-                            font-size: 26px;
-                            box-shadow: 0px -20px 20px rgba(0,0,0,0.2) inset, 0 0 120px rgba(255,255,255,0.75);
-                            white-space: nowrap;
-                            :before {
-                                    font-family: 'icon';
-                                    content: "\e90b";
-                                }
-                        }
-                        .search-cities{
-                            position: absolute;
-                            right: 0;
-                            top: 0;
-                            display: block;
-                            padding: 0px;
-                            text-align: center;
-                            z-index: 4;
-                            overflow: hidden;
-                            font-size: 0;
-                            border-radius: 8px;
-                            max-height: 70px;
-                            margin-right: -10px;
-                            background: #fff;
-                            margin-top: -12px;
-                            .cities-list{
-                                    padding: 2px;
-                                    overflow: hidden;
-                                    border-radius: 6px;
-                                    box-shadow: 0 0 20px 0 rgba(255,255,255,0.3);
-                                    text-align: center;
-                                    a{
-                                        transform: scale(1);
-                                        text-transform: uppercase;
-                                        font-size: 11px;
-                                        letter-spacing: 1px;
-                                        margin: 6px 6px;
-                                        padding: 25px 0 25px 0;
-                                        font-weight: normal;
-                                        color: rgb(38,163,135);
-                                        width: auto;
-                                        font-family: 'Roboto';
-                                        border-radius: 8px;
-                                        background-position: center center;
-                                        background-size: cover;
-                                        box-shadow: 0 10000px rgba(255,255,255,1) inset;
-                                        display: none;
-                                        float: right;
-                                        clear: right;
-                                        span{
-                                               background: #fff;
-                                               color: rgb(38,163,135);
-                                               padding: 4px 8px 3px 8px;
-                                               border-radius: 6px;
-                                               text-transform: uppercase;
-                                               font-size: 11px;
-                                               letter-spacing: 1px;
-                                               text-align: center;
-                                               white-space: nowrap;
-                                        }
-                                    }
-                            }
-                        }
-                        .search-submit{
-                            position: absolute;
-                            width: 50px;
-                            height: 100%;
-                            border: 0;
-                            text-align: right;
-                            top: 0;
-                            right: -5px;
-                            vertical-align: top;
-                            font-size: 18px;
-                            font-weight: 700;
-                            border-radius: 5px;
-                            z-index: 12;
-                            display: inline-block;
-                            white-space: nowrap;
-                            input{
-                                background-color: transparent;
-                                width: 100%;
-                                height: 100%;
-                                border: 0;
-                                padding-left: 10px;
-                                position: relative;
-                                color: rgb(38,163,135);
-                                 font-size: 18px;
-                                 letter-spacing: 1px;
-                                 z-index: 1;
-                                 background: transparent;
-                                 box-shadow: none;
-                                 cursor: pointer;
-                                 padding: 1px 6px;
-                                 user-select: none;
-                                 white-space: pre;
-                                 word-spacing: normal;
-                                 text-transform: none;
-                                 text-indent: 0px;
-                                 text-shadow: none;
-                                 display: inline-block;
-                            }
-                            i{
-                                width: 100%;
-                                height: 100%;
-                                text-align: right;
-                                position: absolute;
-                                padding-top: 6px;
-                                padding-right: 12px;
-                                right: 0;
-                                color: rgb(38,163,135);
-                                font-size: 30px;
-                                cursor: pointer;
-                                font-style: normal;
-                                font-weight: normal;
-                                text-shadow: -1px -1px 0px rgba(255,255,255,1), -1px 1px 0px rgba(255,255,255,1), 1px 1px 0px rgba(255,255,255,1), 1px -1px 0px rgba(255,255,255,1), 0px -1px 0px rgba(255,255,255,1), 0px 1px 0px rgba(255,255,255,1), 1px 0px 0px rgba(255,255,255,1), -1px 0px 0px rgba(255,255,255,1);
-                                :before {
-                                       font-family: 'icon';
-                                       content: "\ec22";
-                                       display: inline-block;
-                                       font-size: 24px;
-                                       margin-top: 0;
-                                       margin-left: 3px;//////////////
-                                   }
-                                   
-                            }
-                        }
-                    }
-                }
-                .search-categories{
-                        width: 1074.4px;
-                        left: 134.3px;
-                        position: relative;
-                        margin-top: 12px;
-                        display: block;
-                        padding: 15px;
-                        color: #fff;
-                        max-height: 93px;
-                        text-align: center;
-                        z-index: 4;
-                        border-radius: 5px;
-                        overflow: hidden;
-                        font-size: 0;
-                        opacity: 1;
-                        white-space: normal;
-                        .categories{
-                                   margin-top: 0;
-                                   overflow: hidden;
-                                   width: 100%;
-                                   padding: 0 10px 0 10px;
-                                   color: #fff;
-                                   text-align: center;
-                                   font-size: 0;
-                                   white-space: normal;
-                                   a{
-                                    transition: all 1s;
-                                    text-transform: uppercase;
-                                    display: inline-block;
-                                    min-width: 100px;
-                                    font-size: 13px;
-                                    text-shadow: 0 0 6px rgba(0,0,0,0.3);
-                                    margin: 3px 1px;
-                                    padding: 8px 12px 10px 12px;
-                                    font-weight: normal;
-                                    color: #fff;
-                                    width: auto;
-                                    font-family: 'Roboto';
-                                    :before {
-                                               display: block;
-                                               font-size: 25px;
-                                               padding: 6px;
-                                               padding-bottom: 10px;
-                                               font-family: 'icon' !important;
-                                               speak: none;
-                                               font-style: normal;
-                                               font-weight: normal;
-                                               font-variant: normal;
-                                               text-transform: none;
-                                               line-height: 1;
-                                               -webkit-font-smoothing: antialiased;
-                                           }
-                                    :hover{
-                                        text-decoration: none;
-                                    }
-                                   }
-                        }
-                        .more-categories{
-                            position: absolute;
-                            right: 0;
-                            bottom: 0;
-                            font-size: 12px;
-                            cursor: pointer;
-                            color: rgb(38,163,135);
-                            background: #fff;
-                            width: 28px;
-                            height: 28px;
-                            line-height: 30px;
-                            text-align: center;
-                            border-radius: 50%;
-                            font: normal normal normal 14px/1 FontAwesome;
-                            text-rendering: auto;
-                           -webkit-font-smoothing: antialiased;
-                           :before {
-                                   content: "\f067";
-                               }
-                        }
-                        .minus-categories{
-                            position: absolute;
-                            right: 0;
-                            bottom: 0;
-                            font-size: 12px;
-                            display: none;
-                            cursor: pointer;
-                            color: rgb(38,163,135);
-                            background: #fff;
-                            width: 28px;
-                            height: 28px;
-                            line-height: 30px;
-                            text-align: center;
-                            border-radius: 50%;
-                            font: normal normal normal 14px/1 FontAwesome;
-                            text-rendering: auto;
-                            -webkit-font-smoothing: antialiased;
-                            :before {
-                                         content: "\f068";
-                                     }
-                        }
-
-                }
-            }           
-     }
-     .bg-container{
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        background-image: none;
-        overflow: hidden;
-        z-index: 2;
-        :after {
-                      content: "";
-                      position: absolute;
-                      bottom: 0;
-                      left: 0;
-                      width: 100%;
-                      height: 8px;
-                      background: url(http://webdesigntrade.net/city-listing/images/miscellaneous/wave.png) top center;
-                      z-index: 4;
-                  }
-                  img{
-                    display: none;
-                    width: 12000px;
-                    height: 12000px;
-                    max-width: 100%;
-                    vertical-align: middle;
-                    border:0;
-                  }
-                  canvas{
-                    display: inline-block;
-                    vertical-align: baseline;
-                  }
+        i{
+              width: 100%;
+              height: 100%;
+              text-align: right;
+              position: absolute;
+              padding-top: 6px;
+              padding-right: 12px;
+              right: 0;
+              color: rgb(38,163,135);
+              font-size: 30px;
+              cursor: pointer;
+              font-style: normal;
+              font-weight: normal;
+        }
+      }
      }
 }
-// hero video end
+      .search-cities{
+            top: 0px;
+            max-height: 363px;
+            z-index: 30;
+            background: rgba(255,255,255,1);
+            margin-top: -158px;
+            margin-right: -16px;
+            right: 0;
+            position:absolute;
+            display: block;
+            padding: 0px;
+            text-align: center;
+            overflow: hidden;
+            font-size: 0;
+            border-radius: 8px;
+                .cities-list{
+                      padding: 2px;
+                      overflow: hidden;
+                      border-radius: 6px;
+                      box-shadow: 0 0 20px 0 rgba(255,255,255,0.3);
+                      text-align: center;
+                      white-space: nowrap;
+          a{
+            transform: scale(1);
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 1px;
+            margin: 6px 6px;
+            padding: 25px 0 25px 0;
+            font-weight: normal;
+            color: rgb(38,163,135);
+            width: auto;
+            font-family: 'Roboto';
+            border-radius: 8px;
+            background-position: center center;
+            background-size: cover;
+            box-shadow: 0 10000px rgba(255,255,255,1) inset;
+            display: none;
+            float: right;
+            clear: right;
+            background-color: transparent;
+            text-align: center;
+            :hover{
+              text-decoration: none;
+            }
+            span{
+                  background: #fff;
+                  color: rgb(38,163,135);
+                  padding: 4px 8px 3px 8px;
+                  border-radius: 6px;
+                  text-transform: uppercase;
+                  font-size: 11px;
+                  letter-spacing: 1px;
+                  font-weight: normal;
+            }
+          }
+          .chosen-city{
+            padding-left: 10px;
+            height: 50px;
+            border: 0;
+            position: relative;
+            color: rgb(38,163,135);
+            font-size: 18px;
+            letter-spacing: 1px;
+            z-index: 1;
+            background: transparent;
+            box-shadow: none;
+            margin:0;
+          }
+        }
+      }
