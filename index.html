@@ -16,57 +16,114 @@
     <body>
    
        <!-- start body wrapper -->
-      <!-- header begin -->
-                
-           <header class="header transparent no-shadow">
+      <!-- header begin -->            
+      <header class="header transparent no-shadow">          
         <!-- Start Navbar -->
         <div class="navbar navbar-inverse" role="navigation" id="slide-nav">
-          <div class="container"><div class="navbar-header" style="left: 0px;"><a class="navbar-toggle"><span class="sr-only">Toggle</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a></div>
-            <div id="slidemenu" style="max-height: 379px; left: -300px;" class="">
+          <div class="container">
+             <div class="navbar-header" style="left: 0px;">
+             <a onclick="slidemenyOpen()" class="navbar-toggle"><span class="sr-only">Toggle</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a></div>
+             <div id="slidemenu" style="max-height: 379px; left: -300px;" class="">
               <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                   <a style="font-family: 'Roboto Condensed', sans-serif;" href="index.html" class="dropdown-toggle" >Ana Səhifə</a>
                   
                 </li>
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Qeydiyyat<b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="login-register.html">Login/Register</a></li>
-                    <li><a href="forgot-password.html">Recover Password</a></li>
-                  </ul>
+                  <a href="about.html" class="dropdown-toggle">Haqqimizda</a>
                 </li>
                 <li class="dropdown">
-                  <a href="about.html" class="dropdown-toggle" data-toggle="dropdown">Haqqimizda<b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="about.html">How it Works</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                  </ul>
+                  <a href="listings-option-1.html" class="dropdown-toggle">Listing</a>
+                  
                 </li>
                 <li class="dropdown">
-                  <a href="blog-option-1.html" class="dropdown-toggle" data-toggle="dropdown">Listing<b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="blog-option-1.html">Blog Grid 1</a></li>
-                    <li><a href="listings-option-1.html">listing grid 1</a></li>
-                    <li><a href="ListingGrid-5.html">listing Grid 5</a></li>
-                   <li><a href="single-blog-option-1.html">Single Article</a></li>
-                 
-                  </ul>
+                  <a style="font-family: 'Roboto Condensed', sans-serif;" href="contact.html" class="dropdown-toggle">Əlaqə</a>
                 </li>
-                <li class="dropdown">
-                  <a style="font-family: 'Roboto Condensed', sans-serif;" href="contact.html" class="dropdown-toggle" data-toggle="dropdown">Əlaqə<b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="contact.html">Default Contact</a></li>
-                    <li><a href="support.html">Support</a></li>
-                  </ul>
+                <li  class="dropdown">
+                  <a onclick="fromLeft()" style="cursor: pointer;" class="solUcun dropdown-toggle" data-toggle="dropdown">Qeydiyyat 
+                  <i class="fa fa-user-plus" aria-hidden="true"></i>
+                  </a>
+
                 </li>
               </ul>
             </div>
           </div>
         </div><div class="inverse" id="navbar-height-col" style="left: -300px;"></div>
         <!-- End Navbar -->
+        <!-- register popup begin -->  
+  <div id="popupRow" class="row">
+     <!-- geriye begin -->
+     <i onclick="toLeft()" id="toLeft" class="fa fa-times-circle" aria-hidden="true"></i>
+    <!-- geriye end -->
+          <div class="col-sm-12 text-center" style=" margin-top: 60px; overflow-y: auto;">
+        <div class="panel panel-form" style="display: inline-block; top: 0px; margin-top: 55px; opacity: 1;">
+              <div class="panel-heading">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <a id="a1" style="cursor: pointer;" onclick="closeRegister()"  class="active" id="login-form-link">Daxil ol</a>
+                  </div>
+                  <div class="col-xs-6">
+                    <a id="a2"  style="cursor: pointer;" onclick="openRegister()" id="register-form-link">Qeydiyyat</a>
+                  </div>
+                </div>
+                <hr>
+              </div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <form  id="login-form" action="#" method="post">
+                      <div class="form-group">
+                        <input type="text" name="username" id="login-username" tabindex="1" class="form-control" placeholder="İstifadəçi adi" value="">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" name="password" id="login-password" tabindex="2" class="form-control" placeholder="Şifrə">
+                      </div>
+                      <div class="form-group text-center">
+                        <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+                        <label for="remember"> Yadda saxla</label>
+                      </div>
+                      <div class="form-group">
+                        <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-submit" value="Daxil ol">
+                      </div>
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <div class="text-center">
+                              <a href="forgot-password.html" tabindex="5" class="login-forgot-password">Şifrəni Unutmusan?</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                    <form id="register-form" action="#" method="post">
+                      <div class="form-group">
+                        <input type="text" name="username" id="register-username" tabindex="1" class="form-control" placeholder="Şifrə" value="">
+                      </div>
+                      <div class="form-group">
+                        <input type="email" name="email" id="register-email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" name="password" id="register-password" tabindex="2" class="form-control" placeholder="Şifrə">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" name="confirm-password" id="register-confirm-password" tabindex="2" class="form-control" placeholder="Təkrar Şifrə">
+                      </div>
+                      <div class="form-group">
+                        <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-submit" value="Qeydiyyatdan Keç">
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- register-popup end -->
       </header>
           <!-- header end -->
+          <!-- search video drag benin -->
+
+          <!-- search video drag end -->
           <!-- first video section begin -->
       <div class="container-fluid hero-header h-video transparent" style="height: 791px;">
           <div class="hero-video" style="opacity: 1;">
@@ -75,15 +132,15 @@
           </div>  
       </div>
       <!-- search centralizied begin -->
-      <div class="hero-search" style="width: 70%;">
+      <div id="searchField" class="hero-search" style="width: 70%;">
               <form>
                <fieldset>
                   <input type="text" class="form-control" data-placeholder="Explore and Enjoy..." placeholder="Axtar"> 
                   <!-- <span class="typed-cursor">|</span> -->
               </fieldset>
                 <!-- Start Search cities Toggle -->
-              <div class="search-cities-toggle" style="opacity: 1;">
-                   <i class="fa fa-building-o" aria-hidden="true"></i>
+              <div onclick="searchBoxOpen()" style="transition-duration: 22s!i;" id="searchToggle" class="search-cities-toggle" style="opacity: 1;">
+                 <i class="fa fa-search-plus" aria-hidden="true"></i>
               </div>
                 <!-- End Search cities Toggle -->         
              <div class="search-submit">
@@ -91,30 +148,117 @@
                   <i class="fa fa-search" aria-hidden="true"></i>
              </div>
          </form>
+         <!-- cities-category filter begin -->
+         <div id="search-cities-drag">
+           <form id="mapSearch" class="form-inline" method="post">
+                        <ul>
+                            <li>
+                                <label> Şəhər / region</label>
+                                <select class="Test" id="cities">
+                                    <option name="location" value="all">Hamısı</option>
+                                    <option name="location" value="Ağcabədi">Ağcabədi</option>
+                                    <option name="location" value="Ağdam">Ağdam</option>
+                                    <option name="location" value="Ağdaş">Ağdaş</option>
+                                    <option name="location" value="Ağdərə">Ağdərə</option>
+                                    <option name="location" value="Ağstafa">Ağstafa</option>
+                                    <option name="location" value="Ağsu">Ağsu</option>
+                                    <option name="location" value="Astara">Astara</option>
+                                    <option name="location" value="Bakı">Bakı</option>
+                                    <option name="location" value="Balakən">Balakən</option>
+                                    <option name="location" value="Beyləqan">Beyləqan</option>
+                                    <option name="location" value="Bərdə">Bərdə</option>
+                                    <option name="location" value="Biləsuvar">Biləsuvar</option>
+                                    <option name="location" value="Cəbrayıl">Cəbrayıl</option>
+                                    <option name="location" value="Cəlilabad">Cəlilabad</option>
+                                    <option name="location" value="Culfa">Culfa</option>
+                                    <option name="location" value="Daşkəsən">Daşkəsən</option>
+                                    <option name="location" value="Dəliməmmədli ">Dəliməmmədli  </option>
+                                    <option name="location" value="Füzuli">Füzuli</option>
+                                    <option name="location" value="Gədəbəy">Gədəbəy</option>
+                                    <option name="location" value="Gəncə">Gəncə</option>
+                                    <option name="location" value="Goranboy">Goranboy</option>
+                                    <option name="location" value="Göyçay">Göyçay</option>
+                                    <option name="location" value="Göygöl">Göygöl</option>
+                                    <option name="location" value="Cəlilabad">Cəlilabad</option>
+                                    <option name="location" value="Hacıqabul">Hacıqabul</option>
+                                    <option name="location" value="Xaçmaz">Xaçmaz</option>
+                                    <option name="location" value="Xankəndi">Xankəndi</option>
+                                    <option name="location" value="Xocalı">Xocalı</option>
+                                    <option name="location" value="Xocavənd">Xocavənd</option>
+                                    <option name="location" value="Xırdalan">Xırdalan</option>
+                                    <option name="location" value="Xızı">Xızı</option>
+                                    <option name="location" value="İmişli">İmişli</option>
+                                    <option name="location" value="İsmayıllı">İsmayıllı</option>
+                                    <option name="location" value="Kəlbəcər">Kəlbəcər</option>
+                                    <option name="location" value="Kürdəmir">Kürdəmir</option>
+                                    <option name="location" value="Qax">Qax</option>
+                                    <option name="location" value="Qazax">Qazax</option>
+                                    <option name="location" value="Qəbələ">Qəbələ</option>
+                                    <option name="location" value="Qobustan">Qobustan</option>
+                                    <option name="location" value="Tovuz">Tovuz</option>
+                                    <option name="location" value="Quba">Quba</option>
+                                    <option name="location" value="Qubadlı">Qubadlı</option>
+                                    <option name="location" value="Qusar">Qusar</option>
+                                    <option name="location" value="Laçın">Laçın</option>
+                                    <option name="location" value="Lerik">Lerik</option>
+                                    <option name="location" value="Lənkəran">Lənkəran</option>
+                                    <option name="location" value="Masallı">Masallı</option>
+                                    <option name="location" value="Mingəçevir">Mingəçevir</option>
+                                    <option name="location" value="Naxçıvan">Naxçıvan</option>
+                                    <option name="location" value="Neftçala">Neftçala</option>
+                                    <option name="location" value="Oğuz">Oğuz</option>
+                                    <option name="location" value="Ordubad">Ordubad</option>
+                                    <option name="location" value="Saatlı">Saatlı</option>
+                                    <option name="location" value="Sabirabad">Sabirabad</option>
+                                    <option name="location" value="Salyan">Salyan</option>
+                                    <option name="location" value="Samux">Samux</option>
+                                    <option name="location" value="Siyəzən">Siyəzən</option>
+                                    <option name="location" value="Sumqayıt">Sumqayıt</option>
+                                    <option name="location" value="Şabran">Şabran</option>
+                                    <option name="location" value="Şamaxı">Şamaxı</option>
+                                    <option name="location" value="Şahbuz">Şahbuz</option>
+                                    <option name="location" value="Şəki">Şəki</option>
+                                    <option name="location" value="Şəmkir">Şəmkir</option>
+                                    <option name="location" value="Şərur">Şərur</option>
+                                    <option name="location" value="Şirvan">Şirvan</option>
+                                    <option name="location" value="Şuşa">Şuşa</option>
+                                    <option name="location" value="Tərtər">Tərtər</option>
+                                    <option name="location" value="Ucar">Ucar</option>
+                                    <option name="location" value="Yardımlı">Yardımlı</option>
+                                    <option name="location" value="Yevlax">Yevlax</option>
+                                    <option name="location" value="Zaqatala">Zaqatala</option>
+                                    <option name="location" value="Zəngilan">Zəngilan</option>
+                                    <option name="location" value="Zərdab">Zərdab</option>
+                               </select>
+                            </li>
+                            <li>
+                                <label>Kateqoriya</label>
+                                <select class="Test" id="post_type">
+                                    <option name="type" value="all">Hamısı</option>
+                                    <option name="type" value="1">Səyahət</option>
+                                    <option name="type" value="0">Qida</option>
+                                    <option name="type" value="0">İstirahət</option>
+                                    <option name="type" value="0">Təhsil</option>
+                                    <option name="type" value="0">Sağlamliq</option>
+                                    <option name="type" value="0">Aliş-veriş</option>
+                                    <option name="type" value="0">Dizayn</option>
+                                    <option name="type" value="0">Şarm</option>
+                                    <option name="type" value="0">İdman</option>
+                                    <option name="type" value="0">Əyləncə</option>
+                                    <option name="type" value="0">Digər</option>
+                                </select>
+
+                            </li>
+                        </ul>
+                        <div class="search-error-desc" style="">
+                            <p class="infoMessage text-center"></p>
+                        </div>
+                    </form>
+         </div>
+         <!-- ctyes-category filter end -->
      </div>
       <!-- search cenytralized end -->
-       <!-- Start Search Cities -->
-               <div class="search-cities">
-                 <div class="cities-list">
-                    <a href="#" style="background-image:url('img/cities/1.jpg')" data-city-id="1">
-                        <span>Boston</span>
-                    </a>
-                    <a href="#" style="background-image:url('img/cities/2.jpg')" data-city-id="2">
-                       <span>Chicago</span>
-                    </a>
-                    <a href="#" style="background-image:url('img/cities/3.jpg')" data-city-id="0" class="current">
-                        <span>Miami</span>
-                    </a>
-                    <a href="#" style="background-image:url('img/cities/4.jpg')" data-city-id="3">
-                        <span>New Orleans</span>
-                    </a>
-                    <a href="cities-option-1.html" style="background-image:url('img/cities/5.jpg')" data-city-id="4" class="go-more-cities">
-                        <span>More Cities</span>
-                     </a>
-                     <input class="chosen-city" type="hidden" name="city" value="0">
-                 </div>
-             </div>
-                <!-- End Search Cities -->
+       
           <!-- first video section end -->
 
           <!-- start catigory section +++++++++++++++++++++++-->
@@ -424,7 +568,7 @@
                       <div class="month">Feb</div>
                     </div>
                   
-                      <a href="single-blog-option-1.html" class="listing-item-link"> <div class="reng"> </div>
+                      <a href="listing-detail.html" class="listing-item-link"> <div class="reng"> </div>
                        <div class="listing-item-title-centralizer">
                            <div  class="listing-item-title "> Beach Glitz-dən Urban Ritz-dən Mayami Hotels Shine</div>
                         </div>
@@ -446,7 +590,7 @@
                        <div class="day">07</div>
                        <div class="month">Feb</div>
                      </div>
-                     <a href="single-blog-option-1.html" class="listing-item-link"><div class="reng"> </div>
+                     <a href="listing-detail.html" class="listing-item-link"><div class="reng"> </div>
                         <div class="listing-item-title-centralizer"> 
                           <div class="listing-item-title"> Bakinin ən yaxşı alış-veriş </div>
                         </div>
@@ -469,7 +613,7 @@
                         <div class="day">02</div>
                         <div class="month">Feb</div>
                       </div>
-                      <a href="single-blog-option-1.html" class="listing-item-link"> <div class="reng"> </div>
+                      <a href="listing-detail.html" class="listing-item-link"> <div class="reng"> </div>
                        <div class="listing-item-title-centralizer">
                           <div class="listing-item-title"> NYC-də bu romantik tədbirlər zamanı yenidən sevgiyə bürünmək </div>
                        </div>
@@ -491,7 +635,7 @@
                        <div class="day">23</div>
                        <div class="month">Jan</div>
                    </div>
-                   <a href="single-blog-option-1.html" class="listing-item-link"> <div class="reng"> </div>
+                   <a href="listing-detail.html" class="listing-item-link"> <div class="reng"> </div>
                        <div class="listing-item-title-centralizer"> 
                        <div class="listing-item-title"> Goat Hill Pizza-dan sourdough alın </div>
                        </div>
@@ -514,7 +658,7 @@
                       <div class="month">Feb</div>
                     </div>
                   
-                      <a href="single-blog-option-1.html" class="listing-item-link"> <div class="reng"> </div>
+                      <a href="listing-detail.html" class="listing-item-link"> <div class="reng"> </div>
                        <div class="listing-item-title-centralizer">
                            <div class="listing-item-title"> Beach Glitz-dən Urban Ritz-dən Mayami Hotels Shine</div>
                         </div>
@@ -538,7 +682,7 @@
                        <div class="day">07</div>
                        <div class="month">Feb</div>
                      </div>
-                     <a href="single-blog-option-1.html" class="listing-item-link"><div class="reng"> </div>
+                     <a href="listing-detail.html" class="listing-item-link"><div class="reng"> </div>
                         <div class="listing-item-title-centralizer"> 
                           <div class="listing-item-title"> Bakinin ən yaxşı alış-veriş şəbəkələrindən çantalarınızı doldurun</div>
                         </div>
@@ -561,7 +705,7 @@
                         <div class="day">02</div>
                         <div class="month">Feb</div>
                       </div>
-                      <a href="single-blog-option-1.html" class="listing-item-link"> <div class="reng"> </div>
+                      <a href="listing-detail.html" class="listing-item-link"> <div class="reng"> </div>
                        <div class="listing-item-title-centralizer">
                           <div class="listing-item-title"> NYC-də bu romantik tədbirlər zamanı yenidən sevgiyə bürünmək </div>
                        </div>
@@ -583,7 +727,7 @@
                        <div class="day">23</div>
                        <div class="month">Jan</div>
                    </div>
-                   <a href="single-blog-option-1.html" class="listing-item-link"> <div class="reng"> </div>
+                   <a href="listing-detail.html" class="listing-item-link"> <div class="reng"> </div>
                        <div class="listing-item-title-centralizer"> 
                        <div class="listing-item-title"> Goat Hill Pizza-dan sourdough alın </div>
                        </div>

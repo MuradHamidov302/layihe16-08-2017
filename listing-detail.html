@@ -1,0 +1,506 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+         <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="owl/owl.carousel.min.css">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+
+   <!-- header begin -->            
+      <header style="background: rgb(38,163,135)!important;" class="header transparent no-shadow">       
+        <!-- Start Navbar -->
+        <div class="navbar navbar-inverse" role="navigation" id="slide-nav">
+          <div class="container">
+             <div class="navbar-header" style="left: 0px;">
+             <a onclick="slidemenyOpen()" class="navbar-toggle"><span class="sr-only">Toggle</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a></div>
+             <div id="slidemenu" style="max-height: 379px; left: -300px;" class="">
+              <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                  <a style="font-family: 'Roboto Condensed', sans-serif;" href="index.html" class="dropdown-toggle" >Ana Səhifə</a>
+                  
+                </li>
+                <li class="dropdown">
+                  <a href="about.html" class="dropdown-toggle">Haqqimizda</a>
+                </li>
+                <li class="dropdown">
+                  <a href="listings-option-1.html" class="dropdown-toggle" >Listing</a>
+                  
+                </li>
+                <li class="dropdown">
+                  <a style="font-family: 'Roboto Condensed', sans-serif;" href="contact.html" class="dropdown-toggle">Əlaqə</a>
+                </li>
+                <li  class="dropdown">
+                  <a onclick="fromLeft()" style="cursor: pointer;" class="solUcun dropdown-toggle" data-toggle="dropdown">Qeydiyyat 
+                  <i class="fa fa-user-plus" aria-hidden="true"></i>
+                  </a>
+
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div><div class="inverse" id="navbar-height-col" style="left: -300px;"></div>
+        <!-- End Navbar -->
+        <!-- register popup begin -->  
+  <div id="popupRow" class="row">
+     <!-- geriye begin -->
+     <i onclick="toLeft()" id="toLeft" class="fa fa-times-circle" aria-hidden="true"></i>
+    <!-- geriye end -->
+          <div class="col-sm-12 text-center" style=" margin-top: 60px; overflow-y: auto;">
+        <div class="panel panel-form" style="display: inline-block; top: 0px; margin-top: 55px; opacity: 1;">
+              <div class="panel-heading">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <a id="a1" style="cursor: pointer;" onclick="closeRegister()"  class="active" id="login-form-link">Daxil ol</a>
+                  </div>
+                  <div class="col-xs-6">
+                    <a id="a2"  style="cursor: pointer;" onclick="openRegister()" id="register-form-link">Qeydiyyat</a>
+                  </div>
+                </div>
+                <hr>
+              </div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <form  id="login-form" action="#" method="post">
+                      <div class="form-group">
+                        <input type="text" name="username" id="login-username" tabindex="1" class="form-control" placeholder="İstifadəçi adi" value="">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" name="password" id="login-password" tabindex="2" class="form-control" placeholder="Şifrə">
+                      </div>
+                      <div class="form-group text-center">
+                        <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+                        <label for="remember"> Yadda saxla</label>
+                      </div>
+                      <div class="form-group">
+                        <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-submit" value="Daxil ol">
+                      </div>
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <div class="text-center">
+                              <a href="forgot-password.html" tabindex="5" class="login-forgot-password">Şifrəni Unutmusan?</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                    <form id="register-form" action="#" method="post">
+                      <div class="form-group">
+                        <input type="text" name="username" id="register-username" tabindex="1" class="form-control" placeholder="Şifrə" value="">
+                      </div>
+                      <div class="form-group">
+                        <input type="email" name="email" id="register-email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" name="password" id="register-password" tabindex="2" class="form-control" placeholder="Şifrə">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" name="confirm-password" id="register-confirm-password" tabindex="2" class="form-control" placeholder="Təkrar Şifrə">
+                      </div>
+                      <div class="form-group">
+                        <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-submit" value="Qeydiyyatdan Keç">
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- register-popup end -->
+      </header>
+          <!-- header end -->
+
+
+<!-- page head start -->
+<section id="page-hd">
+	
+<div class="container-fluid listing-title"> <div class="breadcrumbs text-left"> <ul> <li><a href="index.html">Home</a></li><li><a href="listings-option-1.html">Listings</a></li><li><a href="#">Boston</a></li><li><a href="listings-option-1.html">Food</a></li><li><a href="listings-option-1.html">Restaurants</a></li></ul> </div>
+
+<div class="row text-center">
+ <h2> Bistro du Midi </h2> </div>
+
+ <div class="pg-header-icon "><i class="fa fa-camera" aria-hidden="true"></i></div>
+ </div>
+
+
+<div class="wave-top-gallery"></div>
+
+</section>
+<!-- page head end ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+
+<!-- section img-slide start -->
+<section id="img-slide">
+	
+	<div class="container-fluid gallery" id="gal" onselectstart="return false;"> <div class="gallery-item">
+	 <a href="img/single-listing/1.jpg" data-lightbox="gallery" data-title="Our external tables and front walls with retro aspect"></a><img alt="" src="img/single-listing/1.jpg"><div class="gallery-item-caption">Our external tables and front walls with retro aspect</div> </div><div class="gallery-item"> 
+	 <a href="img/single-listing/2.jpg" data-lightbox="gallery" data-title="Internal tables, harmonious environment for the whole family"></a><img alt="" src="img/single-listing/2.jpg"><div class="gallery-item-caption">Internal tables, harmonious environment for the whole family</div> </div><div class="gallery-item">
+	  <a href="img/single-listing/3.jpg" data-lightbox="gallery" data-title="Our chef preparing some delicious dinner"></a><img alt="" src="img/single-listing/3.jpg"><div class="gallery-item-caption">Our chef preparing some delicious dinner</div> </div><div class="gallery-item"> 
+	  <a href="img/single-listing/4.jpg" data-lightbox="gallery" data-title="Salad with fries and Sauce"></a><img alt="" src="img/single-listing/4.jpg"><div class="gallery-item-caption">Salad with fries and Sauce</div> </div><div class="gallery-item">
+	   <a href="img/single-listing/5.jpg" data-lightbox="gallery" data-title="Gourmet options"></a><img alt="" src="img/single-listing/5.jpg"><div class="gallery-item-caption">Gourmet options</div> </div><div class="gallery-item">
+	    <a href="img/single-listing/6.jpg" data-lightbox="gallery" data-title="Varied menu of wines"></a><img alt="" src="img/single-listing/6.jpg"><div class="gallery-item-caption">Varied menu of wines</div> </div><div class="gallery-item">
+	     <a href="img/single-listing/7.jpg" data-lightbox="gallery" data-title="Special spinach salad as entry"></a><img alt="" src="img/single-listing/7.jpg"><div class="gallery-item-caption">Special spinach salad as entry</div> </div></div>
+</section>
+<!-- section img-slidr end++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+<!-- page content start section allcontent -->
+<section id="allcontent">
+	<div class="container listing-description" id="desc"> 
+
+<div class="pg-header-icon "><i class="fa fa-file-text-o" aria-hidden="true"></i></div>
+<div class="row"> 
+
+<!-- start like section -->
+<section id="like">
+	
+ <div class="col-sm-3 text-center">
+  <div class="average-review">
+  
+   <div class="rating">43</div>
+   <div class="stars">
+    <i class="fa fa-heart fa-3x"></i>
+     </div>
+      <img alt="" src="img/review-background-mask.png"> 
+      </div>
+      <h3 style="color:rgb(38,163,135);">Bəyən</h3>
+      </div>
+</section>
+<!-- end like section -->
+
+<!-- right content start -->
+<section id="rightcontent">
+
+	<div class="col-sm-9"> <div> 
+<div class="description-container"> 
+<table class="description-text table">
+ <tbody>
+ <tr> 
+ <div class="description col-sm-9"> 
+ <h4 class="listing-subtitle text-left"> Bistro du Midi (MARC) - Luxury in the heart of Boston </h4> <p class="capitalize-initial"> The Marlon Abela Restaurant Corporation (MARC) was founded in 2001 by Chairman Marlon Abela to create a portfolio of internationally-renowned iconic destination restaurants. The focus is on provenance and making exceptional quality accessible, and is supported by the hallmark superior service, highly-acclaimed wine program and stylish décor. This ethos and Abela’s keen eye for hospitality, style, food and wine has resulted in the creation of the award-winning, unique and luxurious collection of restaurants in London’s Mayfair and the USA. </p>
+ <p> Based in London, MARC is already an internationally recognized name in the restaurant industry: from New York’s A Voce restaurants, Morello Bistro in Greenwich, CT, and Bistro du Midi in Boston, to the Michelin-starred London restaurants Umu and The Greenhouse, plus its exclusive private members’ club Morton’s on Berkeley Square in Mayfair. </p>
+ </div>
+ <div class="listing-opening col-sm-3">
+  <h5 > Opening / Start </h5>
+   <p>Mon-Sat <span>11am-11pm</span></p>
+   <h5 >Close / Finsh</h5>
+   <p>Sun <span>12noon-10pm</span></p>
+   <hr>
+    <div class="list-address"> 272 Boylston St, Boston </div>
+		      <div class="list-phones"> 
+		      <div class="list-phone"> 123 793 644 661 </div>
+				   </div>
+   </div>
+   </tr>
+   </tbody>
+   </table> 
+   </div>
+             </div></div>
+</section>
+<!-- right content end +++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+</div>
+
+</div>
+</section>
+<hr>
+
+<!-- page content end  section allcontent+++++++++++++++++++++++++++++++++++++++++++++-->
+
+
+<div class="container">
+	<div class="row">
+		
+<!-- left content start++++++++++++++++++++++++++++-->
+<section id="leftcontent">
+	
+<div class="col-sm-3 text-center"> 
+<div class="listing-avatar">
+<a class="verified-data" title="" data-toggle="tooltip" data-placement="right" data-original-title="Verifyed Listing"></a> 
+<a  href="user.html">
+ <img alt="" src="img/user/7.jpg" class="center-block"> 
+</a>
+ </div>
+ <div class="claimed text-center">
+  <div class="ribbon">Murad Hamidov</div>
+  </div>
+  <div class="listing-social"> 
+  <div class="social-networks"> 
+  <a href="#" class="fa fa-facebook"></a>
+   <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-instagram"></a> 
+    <a href="#" class="fa fa-google-plus"></a>
+     </div>
+     </div>
+        </div>
+</section>
+<!-- left content end +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+
+
+<div class="col-sm-9">
+	<!-- start section author -->
+<section id="author">
+    
+            <div class="comments-container comm">
+                <h2 class="scheme-color">04 Rəylər</h2>
+                <ul id="comments-list" class="comments-list">
+                    <li>
+                        <div class="comment-main-level"> <a  href="user.html" class="comment-avatar">
+                        <img alt="" src="img/user/1.jpg"></a>
+                            <div class="comment-box">
+                                <div class="comment-head">
+                                    <h6 class="comment-name by-author"><a href="#">John Doe</a></h6> <span>20 dəqiqə əvvəl</span> <i class="fa fa-reply"></i>                                    <i class="fa fa-heart"></i> </div>
+                                <div class="comment-content">Beləliklə, bu zəhmli oteldə heç vaxt yerləşməmisiniz? Təcrübənizi təsvir edin!</div>
+                            </div>
+                        </div>
+                        <ul class="comments-list reply-list">
+                            <li> <a href="user.html" class="comment-avatar"><img alt="" src="img/user/2.jpg"></a>
+                                <div class="comment-box">
+                                    <div class="comment-head">
+                                        <h6 class="comment-name"><a href="#">Maria Doe</a></h6> <span>10 dəqiqə əvvəl</span> <i class="fa fa-reply"></i>                                        <i class="fa fa-heart"></i> </div>
+                                    <div class="comment-content">Mən yalnız Hotel Not Hotel-də bir qrupun 7 hissəsi kimi 2 gecə qaldıqdan dönmüşəm. Bu otel inanılmaz səfərimizə kömək etdi! Otelin özü inanılmaz idi - qəribə, maraqlı və sərin bir mükəmməl qarışıq.</div>
+                                </div>
+                            </li>
+                            <li> <a href="user.html" class="comment-avatar"><img alt="" src="img/user/1.jpg"></a>
+                                <div class="comment-box">
+                                    <div class="comment-head">
+                                        <h6 class="comment-name by-author"><a href="#">John Doe</a></h6> <span>10 dəqiqə əvvəl</span> <i class="fa fa-reply"></i>                                        <i class="fa fa-heart"></i> </div>
+                                    <div class="comment-content">Görüşünüzün sayəsində nə qədər əla təcrübə!</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="comment-main-level"> <a href="user.html" class="comment-avatar"><img alt="" src="img/user/5.jpg"></a>
+                            <div class="comment-box">
+                                <div class="comment-head">
+                                    <h6 class="comment-name"><a href="#">Carla Doe</a></h6> <span>10 dəqiqə əvvəl</span> <i class="fa fa-reply"></i>                                    <i class="fa fa-heart"></i> </div>
+                                <div class="comment-content">Qəribə, arty, qəribə bir yer qalacaq. Çalışanlar ən qonaqpərvər və son dərəcə faydalı idi və otaqlar zəhmli idi. Bookcase XL çox rahat bir yatağa və fab vanna otağı imkanlarına malik idi.</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+</section>
+<!-- end section authot ++++++++++++++++++++++++++++-->
+           
+<!-- start section more -->
+        <section id="more" class="row">
+            <div class="more-listing icon-plus" title="" data-toggle="tooltip" data-placement="top" data-original-title="More Articles"><i class="fa fa-plus" aria-hidden="true"></i></div>
+        </section>
+<!-- end more section +++++++++++++++++++++++++++++-->
+            <!-- start section feedbck +++++++++++++++++-->
+
+<section id="feedbck">
+    <div class="container-fluid feedback">
+                <h2 class="scheme-color">Şərh</h2>
+            </div>
+            <div class="col-sm-12">
+                <div class="comment-form">
+                    <div class="login-container">
+                        <form method="post" id="contact" name="contact" class="form-horizontal contact-form">
+                            <div class="form-group">
+                                <div class="col-sm-12 inputGroupContainer">
+                                    <div class="input-group"> <textarea style="margin: 0px; height: 170px; width: 100%;" name="message" id="message" class="form-control" placeholder="Sizin Rəyiniz (Tələb Olunur)"
+                                            required=""></textarea> </div>
+                                </div>
+                            </div>
+                       
+                            <div class="form-group sub">
+                                <div class="col-sm-12"> <button type="submit" name="name" class="btn btn-warning submit">TƏQDİM</button> </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+</section>
+
+<!-- end section feedbck +++++++++++++++++-->
+</div>
+
+
+	</div>
+</div>
+
+       <!-- yeniler begin -->
+       <section id="yeniler">
+          <div class="container-fluid blog blog-home"> 
+            <div class="row row-title">
+               <h1>Yeni tövsiyələr</h1> 
+               <h4>Sizin üçün bir sıra təkliflərimiz var</h4> 
+           </div>
+           <div class="row listing white"> 
+
+  
+       <div class="col-sm-3">
+                  <div class="listing-item ">
+                   <a href="blog-option-1.html" class="category-icon " style="opacity: 1;"><i class="fa fa-newspaper-o fa-2x" aria-hidden="true"></i></a>
+                    <div class="listing-item-date" style="opacity: 1;"> 
+                      <div class="day">12</div>
+                      <div class="month">Feb</div>
+                    </div>
+                  
+                      <a href="listing-detail.html" class="listing-item-link"> <div class="reng"> </div>
+                       <div class="listing-item-title-centralizer">
+                           <div  class="listing-item-title "> Beach Glitz-dən Urban Ritz-dən Mayami Hotels Shine</div>
+                        </div>
+                        <img alt="" src="img/blog/14.jpg"> 
+                        <div class="listing-black-overlay"></div>
+                      </a> 
+                  
+                      <div class="listing-item-data"> 
+                        <i class="fa fa-heart-o fa-2x" title="Bəyən" aria-hidden="true"></i><p>1000-Bəyənmə</p> </div>
+                     
+                        </div>
+                 </div>
+    
+        <div class="col-sm-3">
+                  <div class="listing-item"> 
+                     <a href="blog-option-1.html" class="category-icon" style="opacity: 1;"><i class="fa fa-paperclip fa-2x" aria-hidden="true"></i></a> 
+                     <div class="listing-item-date" style="opacity: 1;"> 
+                       <div class="day">07</div>
+                       <div class="month">Feb</div>
+                     </div>
+                     <a href="listing-detail.html" class="listing-item-link"><div class="reng"> </div>
+                        <div class="listing-item-title-centralizer"> 
+                          <div class="listing-item-title"> Bakinin ən yaxşı alış-veriş </div>
+                        </div>
+                        <img alt="" src="img/blog/15.jpg"> 
+                        <div class="listing-black-overlay"></div>
+                      </a>
+                      <div class="listing-item-data"> 
+                  <i class="fa fa-heart-o fa-2x" title="Bəyən" aria-hidden="true"></i><p>123-Bəyənmə</p>
+                
+                    </div>
+                     </div>
+                </div>
+
+        <div class="col-sm-3"> 
+                  <div class="listing-item">
+                       <a href="blog-option-1.html" class="category-icon "  style="opacity: 1;"><i class="fa fa-hand-peace-o fa-2x" aria-hidden="true"></i></a>
+                      <div class="listing-item-date"> 
+                        <div class="day">02</div>
+                        <div class="month">Feb</div>
+                      </div>
+                      <a href="listing-detail.html" class="listing-item-link"> <div class="reng"> </div>
+                       <div class="listing-item-title-centralizer">
+                          <div class="listing-item-title"> NYC-də bu romantik tədbirlər zamanı yenidən sevgiyə bürünmək </div>
+                       </div>
+                        <img alt="" src="img/blog/17.jpg"> 
+                        <div class="listing-black-overlay"></div>
+                      </a> 
+                       <div class="listing-item-data"> 
+                  <i class="fa fa-heart-o fa-2x" title="Bəyən" aria-hidden="true"></i><p>123-Bəyənmə</p>
+                
+                    </div>
+                    </div>
+                </div>
+    
+       <div class="col-sm-3">
+                 <div class="listing-item">
+                   <a href="blog-option-1.html" class="category-icon "  style="opacity: 1;"><i class="fa fa-lightbulb-o fa-2x" aria-hidden="true"></i></a>
+                   <div class="listing-item-date"> 
+                       <div class="day">23</div>
+                       <div class="month">Jan</div>
+                   </div>
+                   <a href="listing-detail.html" class="listing-item-link"> <div class="reng"> </div>
+                       <div class="listing-item-title-centralizer"> 
+                       <div class="listing-item-title"> Goat Hill Pizza-dan sourdough alın </div>
+                       </div>
+                       <img alt="" src="img/blog/16.jpg">
+                        <div class="listing-black-overlay"></div>
+                    </a>
+                      <div class="listing-item-data"> 
+                  <i class="fa fa-heart-o fa-2x" title="Bəyən" aria-hidden="true"></i><p>123-Bəyənmə</p>
+            
+                      </div>
+                          </div>
+           
+   
+    
+ 
+  </div></div>
+                </div>
+       </section>
+       <!-- yeniler end -->
+<!-- start section more -->
+        <section id="more" class="row">
+            <div class="more-listing icon-plus" title="" data-toggle="tooltip" data-placement="top" data-original-title="More Articles"><i class="fa fa-plus" aria-hidden="true"></i></div>
+        </section>
+<!-- end more section +++++++++++++++++++++++++++++-->
+
+        <!-- footer begin -->
+      <footer>
+        <div class="row footer-info">
+          <div class="footer-col footer-terms">
+            <a href="#">İstifadə Şərtləri</a>
+          </div>
+          <div class="footer-col footer-privacy">
+            <a href="#">Gizlilik Siyasəti</a>
+          </div>
+          <div class="footer-col social-networks">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-pinterest"></a>
+          </div>
+          <div class="footer-col footer-links">
+            <a href="index-vimeo.html">Ana Səhifə</a>
+            <a href="about.html">Haqqimizda</a>
+            <a href="#" class="sign-in">Qeydiyyat</a>
+            <a href="pricing.html">Qiymətləndirmə</a>
+            <a href="blog-option-1.html">Blog</a>
+            <a href="contact.html">Əlaqə</a>
+          </div>
+          <div class="footer-col footer-contact">
+            <div class="footer-address">
+              İş Yeriniz Burada
+            </div>
+            <div class="footer-contact-data">
+              (99) 989-745-9922
+            </div>
+          </div>
+        </div><!-- //footer info bura qeder -->
+        <div class="row footer-logo">
+          <a href="index-vimeo.html">
+            <img alt="" src="http://webdesigntrade.net/city-listing/assets/images/logo.png">
+          </a>
+        </div>
+        <div class="row footer-credits">
+          <div class="copyright">
+            (C) 2017  Bütün Hüquqları Qorunur
+          </div>
+          <div class="developer">MM Production Tərəfindən Hazirlanmişdir
+               <a href="https://themeforest.net/user/webdesigntrade" target="_blank">Vebdizayn Ticarəti</a>.
+               </div>
+        </div>
+      </footer>
+
+
+
+
+
+
+  <div class="scroll"><i class="fa fa-angle-double-up fa-3x" aria-hidden="true"></i></div>
+    </body>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="owl/owl.carousel.min.js">  </script>
+       
+        <script src="js/main.js"></script>
+
+        <script src="https://use.fontawesome.com/d8787270cc.js"></script>
+
+</html>

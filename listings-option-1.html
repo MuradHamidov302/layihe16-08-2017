@@ -18,63 +18,113 @@
 <body>
 
 <div class="wrapper" style="overflow: hidden;">
-    <!-- header begin -->
-    <header style="background-color: rgb(38,163,135)!important;" class="header transparent no-shadow">
+   
+   <!-- header begin -->            
+      <header style="background: rgb(38,163,135)!important;" class="header transparent no-shadow">       
         <!-- Start Navbar -->
         <div class="navbar navbar-inverse" role="navigation" id="slide-nav">
-          <div class="container" style="margin-top: 0;">
-          <div class="navbar-header" style="left: 0px;">
-          <a class="navbar-toggle">
-              <span class="sr-only">Toggle</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-          </a>
-          </div>
-            <div id="slidemenu" style="max-height: 379px; left: -300px;" class="">
+          <div class="container">
+             <div class="navbar-header" style="left: 0px;">
+             <a onclick="slidemenyOpen()" class="navbar-toggle"><span class="sr-only">Toggle</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a></div>
+             <div id="slidemenu" style="max-height: 379px; left: -300px;" class="">
               <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
-                  <a style="font-family: 'Roboto Condensed', sans-serif;" href="index.html" class="dropdown-toggle">Ana Səhifə</b></a>
-                
+                  <a style="font-family: 'Roboto Condensed', sans-serif;" href="index.html" class="dropdown-toggle" >Ana Səhifə</a>
+                  
                 </li>
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Qeydiyyat<b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="login-register.html">Login/Register</a></li>
-                    <li><a href="forgot-password.html">Recover Password</a></li>
-                  </ul>
+                  <a href="about.html" class="dropdown-toggle">Haqqimizda</a>
                 </li>
                 <li class="dropdown">
-                  <a href="about.html" class="dropdown-toggle" data-toggle="dropdown">Haqqimizda<b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="about.html">How it Works</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                  </ul>
+                  <a href="listings-option-1.html" class="dropdown-toggle" >Listing</a>
+                  
                 </li>
                 <li class="dropdown">
-                  <a href="blog-option-1.html" class="dropdown-toggle" data-toggle="dropdown">Listing<b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="blog-option-1.html">Blog Grid 1</a></li>
-                    <li><a href="listings-option-1.html">listing grid 1</a></li>
-                    <li><a href="ListingGrid-5.html">listing Grid 5</a></li>
-                   <li><a href="single-blog-option-1.html">Single Article</a></li>
-                  </ul>
+                  <a style="font-family: 'Roboto Condensed', sans-serif;" href="contact.html" class="dropdown-toggle">Əlaqə</a>
                 </li>
-                <li class="dropdown">
-                  <a style="font-family: 'Roboto Condensed', sans-serif;" href="contact.html" class="dropdown-toggle" data-toggle="dropdown">Əlaqə<b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="contact.html">Default Contact</a></li>
-                    <li><a href="support.html">Support</a></li>
-                  </ul>
+                <li  class="dropdown">
+                  <a onclick="fromLeft()" style="cursor: pointer;" class="solUcun dropdown-toggle" data-toggle="dropdown">Qeydiyyat 
+                  <i class="fa fa-user-plus" aria-hidden="true"></i>
+                  </a>
+
                 </li>
               </ul>
             </div>
           </div>
         </div><div class="inverse" id="navbar-height-col" style="left: -300px;"></div>
         <!-- End Navbar -->
+        <!-- register popup begin -->  
+  <div id="popupRow" class="row">
+     <!-- geriye begin -->
+     <i onclick="toLeft()" id="toLeft" class="fa fa-times-circle" aria-hidden="true"></i>
+    <!-- geriye end -->
+          <div class="col-sm-12 text-center" style=" margin-top: 60px; overflow-y: auto;">
+        <div class="panel panel-form" style="display: inline-block; top: 0px; margin-top: 55px; opacity: 1;">
+              <div class="panel-heading">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <a id="a1" style="cursor: pointer;" onclick="closeRegister()"  class="active" id="login-form-link">Daxil ol</a>
+                  </div>
+                  <div class="col-xs-6">
+                    <a id="a2"  style="cursor: pointer;" onclick="openRegister()" id="register-form-link">Qeydiyyat</a>
+                  </div>
+                </div>
+                <hr>
+              </div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <form  id="login-form" action="#" method="post">
+                      <div class="form-group">
+                        <input type="text" name="username" id="login-username" tabindex="1" class="form-control" placeholder="İstifadəçi adi" value="">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" name="password" id="login-password" tabindex="2" class="form-control" placeholder="Şifrə">
+                      </div>
+                      <div class="form-group text-center">
+                        <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+                        <label for="remember"> Yadda saxla</label>
+                      </div>
+                      <div class="form-group">
+                        <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-submit" value="Daxil ol">
+                      </div>
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <div class="text-center">
+                              <a href="forgot-password.html" tabindex="5" class="login-forgot-password">Şifrəni Unutmusan?</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                    <form id="register-form" action="#" method="post">
+                      <div class="form-group">
+                        <input type="text" name="username" id="register-username" tabindex="1" class="form-control" placeholder="Şifrə" value="">
+                      </div>
+                      <div class="form-group">
+                        <input type="email" name="email" id="register-email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" name="password" id="register-password" tabindex="2" class="form-control" placeholder="Şifrə">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" name="confirm-password" id="register-confirm-password" tabindex="2" class="form-control" placeholder="Təkrar Şifrə">
+                      </div>
+                      <div class="form-group">
+                        <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-submit" value="Qeydiyyatdan Keç">
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- register-popup end -->
       </header>
-    <!-- header end -->
+          <!-- header end -->
+
     <!-- first map begin -->
     <div id="listGrid5" class="row">
         <div class="backgroundMap container-fluid">
@@ -162,7 +212,7 @@
                       <div class="month">Feb</div>
                     </div>
                   
-                      <a href="single-blog-option-1.html" class="listing-item-link"> <div class="reng"> </div>
+                      <a href="listing-detail.html" class="listing-item-link"> <div class="reng"> </div>
                        <div class="listing-item-title-centralizer">
                            <div  class="listing-item-title "> Beach Glitz-dən Urban Ritz-dən Mayami Hotels Shine</div>
                         </div>
@@ -184,7 +234,7 @@
                        <div class="day">07</div>
                        <div class="month">Feb</div>
                      </div>
-                     <a href="single-blog-option-1.html" class="listing-item-link"><div class="reng"> </div>
+                     <a href="listing-detail.html" class="listing-item-link"><div class="reng"> </div>
                         <div class="listing-item-title-centralizer"> 
                           <div class="listing-item-title"> Bakinin ən yaxşı alış-veriş </div>
                         </div>
@@ -205,7 +255,7 @@
                         <div class="day">02</div>
                         <div class="month">Feb</div>
                       </div>
-                      <a href="single-blog-option-1.html" class="listing-item-link"> <div class="reng"> </div>
+                      <a href="listing-detail.html" class="listing-item-link"> <div class="reng"> </div>
                        <div class="listing-item-title-centralizer">
                           <div class="listing-item-title"> NYC-də bu romantik tədbirlər zamanı yenidən sevgiyə bürünmək </div>
                        </div>
@@ -225,7 +275,7 @@
                        <div class="day">23</div>
                        <div class="month">Jan</div>
                    </div>
-                   <a href="single-blog-option-1.html" class="listing-item-link"> <div class="reng"> </div>
+                   <a href="listing-detail.html" class="listing-item-link"> <div class="reng"> </div>
                        <div class="listing-item-title-centralizer"> 
                        <div class="listing-item-title"> Goat Hill Pizza-dan sourdough alın </div>
                        </div>
@@ -246,7 +296,7 @@
                       <div class="month">Feb</div>
                     </div>
                   
-                      <a href="single-blog-option-1.html" class="listing-item-link"> <div class="reng"> </div>
+                      <a href="listing-detail.html" class="listing-item-link"> <div class="reng"> </div>
                        <div class="listing-item-title-centralizer">
                            <div class="listing-item-title"> Beach Glitz-dən Urban Ritz-dən Mayami Hotels Shine</div>
                         </div>
@@ -268,7 +318,7 @@
                        <div class="day">07</div>
                        <div class="month">Feb</div>
                      </div>
-                     <a href="single-blog-option-1.html" class="listing-item-link"><div class="reng"> </div>
+                     <a href="listing-detail.html" class="listing-item-link"><div class="reng"> </div>
                         <div class="listing-item-title-centralizer"> 
                           <div class="listing-item-title"> Bakinin ən yaxşı alış-veriş şəbəkələrindən çantalarınızı doldurun</div>
                         </div>
@@ -289,7 +339,7 @@
                         <div class="day">02</div>
                         <div class="month">Feb</div>
                       </div>
-                      <a href="single-blog-option-1.html" class="listing-item-link"> <div class="reng"> </div>
+                      <a href="listing-detail.html" class="listing-item-link"> <div class="reng"> </div>
                        <div class="listing-item-title-centralizer">
                           <div class="listing-item-title"> NYC-də bu romantik tədbirlər zamanı yenidən sevgiyə bürünmək </div>
                        </div>
@@ -309,7 +359,7 @@
                        <div class="day">23</div>
                        <div class="month">Jan</div>
                    </div>
-                   <a href="single-blog-option-1.html" class="listing-item-link"> <div class="reng"> </div>
+                   <a href="listing-detail.html" class="listing-item-link"> <div class="reng"> </div>
                        <div class="listing-item-title-centralizer"> 
                        <div class="listing-item-title"> Goat Hill Pizza-dan sourdough alın </div>
                        </div>
@@ -330,7 +380,7 @@
                       <div class="month">Feb</div>
                     </div>
                   
-                      <a href="single-blog-option-1.html" class="listing-item-link"> <div class="reng"> </div>
+                      <a href="listing-detail.html" class="listing-item-link"> <div class="reng"> </div>
                        <div class="listing-item-title-centralizer">
                            <div class="listing-item-title"> Beach Glitz-dən Urban Ritz-dən Mayami Hotels Shine</div>
                         </div>
@@ -352,7 +402,7 @@
                        <div class="day">07</div>
                        <div class="month">Feb</div>
                      </div>
-                     <a href="single-blog-option-1.html" class="listing-item-link"><div class="reng"> </div>
+                     <a href="listing-detail.html" class="listing-item-link"><div class="reng"> </div>
                         <div class="listing-item-title-centralizer"> 
                           <div class="listing-item-title"> Bakinin ən yaxşı alış-veriş şəbəkələrindən çantalarınızı doldurun</div>
                         </div>
@@ -373,7 +423,7 @@
                         <div class="day">02</div>
                         <div class="month">Feb</div>
                       </div>
-                      <a href="single-blog-option-1.html" class="listing-item-link"> <div class="reng"> </div>
+                      <a href="listing-detail.html" class="listing-item-link"> <div class="reng"> </div>
                        <div class="listing-item-title-centralizer">
                           <div class="listing-item-title"> NYC-də bu romantik tədbirlər zamanı yenidən sevgiyə bürünmək </div>
                        </div>
@@ -393,7 +443,7 @@
                        <div class="day">23</div>
                        <div class="month">Jan</div>
                    </div>
-                   <a href="single-blog-option-1.html" class="listing-item-link"> <div class="reng"> </div>
+                   <a href="listing-detail.html" class="listing-item-link"> <div class="reng"> </div>
                        <div class="listing-item-title-centralizer"> 
                        <div class="listing-item-title"> Goat Hill Pizza-dan sourdough alın </div>
                        </div>

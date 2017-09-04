@@ -77,11 +77,80 @@ if (like==true) {
 });
 //end like button
 
+ var a=2;
+function slidemenyOpen(){
+   a++;
+   if(a%2){
+    document.getElementById("slidemenu").style.display="block";
+    document.getElementById("searchField").style.top="38em";
+   }
+   else{
+    document.getElementById("slidemenu").style.display="none";
+    document.getElementById("searchField").style.top="20em";
+   }
+}
+// navbar begin
 
- //MURAD BU COMMENTE ALDIGIM YERI JAVASCRIPT FAYLINI TAPIB YERLESDIRERSEN 
-//JAVASCRIPT FAYLLARINI NE ETMISEN? HEC BIRI YOXDU 
+// navbar end
+
 
   function myFunction(){
     document.getElementById('mySelector').css(display, 'block');
   }
-////end
+
+  // register popup begin
+   function openRegister(){
+    document.getElementById("register-form").style.display="block";
+    document.getElementById("login-form").style.display = "none";
+  }
+
+   function closeRegister(){
+    document.getElementById("login-form").style.display = "block";
+    document.getElementById("register-form").style.display="none";
+  }
+
+
+  function toLeft(){
+    document.getElementById("popupRow").style.left = "-300em";
+    document.body.style.overflow = "visible";
+   };
+
+function fromLeft(){
+    document.getElementById("popupRow").style.left = "0em";
+    document.body.style.overflow = "hidden";
+  };
+
+  // register popup end
+  // search toggle begin
+  var m=2;
+  function searchBoxOpen(){
+     m++;
+     if(m%2){
+      document.getElementById("search-cities-drag").style.left = "0em";
+     }
+     else{
+      document.getElementById("search-cities-drag").style.left = "-42em";
+     }
+  }
+  // serch toggle end
+  // listing grid 5 deki xerite  begin
+function mapOpen(){
+   document.getElementById("mapImg").style.left = "-100em";
+   document.getElementById("mapTor").style.width = "100%";
+}
+
+function mapClose(){
+   document.getElementById("mapImg").style.left = "0em";
+   document.getElementById("mapTor").style.width = "55%";
+}
+
+
+function test(){
+  console.log('Success ugurlu');
+}
+// listing grid 5 deki xerite end
+//end
+
+
+
+
