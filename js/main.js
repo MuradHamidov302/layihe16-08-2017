@@ -149,6 +149,21 @@ function test(){
   console.log('Success ugurlu');
 }
 // listing grid 5 deki xerite end
+
+// catalog search begin
+ // search toggle begin
+  var c=1;
+  function searchBoxOpen2(){
+     c++;
+     if(c%2){
+      document.getElementById("search-cities-drag").style.display = "none";
+     }
+     else{
+      document.getElementById("search-cities-drag").style.display = "block";
+     }
+  }
+  // serch toggle end
+// catalog search end
 //end
 
 

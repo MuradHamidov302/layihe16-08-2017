@@ -32,6 +32,10 @@
       		width:100%;
       		position:relative;
       		top:44%;
+          #switchTor{
+                position: absolute;
+                left: 2em;
+          }
       		   i{
                     display: inline-block;
                     position: absolute;
@@ -247,39 +251,13 @@
           }
           // filter buttonu end
           // selectpicker begin
-          .selectpicker{
-            z-index: 99999;
-            padding-left: 0.2em;
-            box-sizing: border-box;
-            height: 10em;
-            width: 10em;
-            position: absolute;
-            top: -9.5em;
-            right: 0;
-            border-width: 1px;
-            border-style: solid;
-            border-color: rgb(169, 169, 169);
-            color: rgb(38,163,135)!important;
-            border-image: initial;
-            align-items: flex-start;
-            overflow-x: hidden;
-            overflow-y: scroll;
-            vertical-align: text-bottom;
-            user-select: none;
-            white-space: nowrap;
-            border-width: 1px;
-            border-style: inset;
-            border-color: grey;
-            border-image: initial;
-            border-radius: initial;
-            display: none;
-            optgroup{
-              font-weight: 700;
-              font-size: 15px;
-              option{
-
-              }
-            }
+          #filterBox{
+               width: 8em;
+               height: 8em;
+               position: absolute;
+               z-index: 9999999999;
+               top: -7.5em;
+               right: 0;
           }
           // selectpicker end
     }
@@ -287,110 +265,124 @@
     .listing-block{
           margin-top: 40px;
           position: relative;
-          padding-right: 15px;
-          padding-left: 15px;
-          margin-right: auto;
-          margin-left: auto;
-          font-weight: normal;
-          font-size: 15px;
-          .white{
-                padding-bottom: 0;
-                text-align: center;
-                width: 100%;
-                margin: 0;  
-                 @media(max-height:780px){
-                   width: 100%;
-                   box-sizing:border-box;
-                           } 
-                .col-sm-3{
-                      width: 49.94%;
-                      position: relative;
-                      min-height: 1px;
-                      padding-right: 15px;
-                      padding-left: 15px;
-                      text-align: center;
-                      display: inline-block;
-                      @media(max-height:780px){
-                              // width: 100%;
-                              // box-sizing:border-box;
-                           } 
-                      .listing-item{
-                            max-width: 100%;
-                            margin-bottom: 20px;
-                            width: 100%;
-                            position: relative;
-                            display: inline-block;
-                            i{
-                                  left: 0;
-                                  top: 12%;
-                                  margin-left: -4px;
-                                  background: #fff;
-                                  color: rgb(38,163,135);
-                                  transition: 1s transform;
-                                  position: absolute;
-                                  width: 44px;
-                                  height: 44px;
-                                  line-height: 44px;
-                                  font-size: 30px;
-                                  padding-top: 3px;
-                                  text-align: center;
-                                  box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.10), -2px -2px 5px 0 rgba(0,0,0,0.10);
-                                  border-radius: 50%;
-                                  z-index: 15;
-                                  margin-top: -26px;
-                            }
-                            .listing-item-link{
-                              box-shadow: 8px 8px 12px 0 rgba(0,0,0,0.12), -8px -8px 12px 0 rgba(0,0,0,0.12);
-                              border-radius: 14px 0 0 14px;
-                              width: 100%;
-                              text-align: left;
-                              position: relative;
-                              background: rgba(255,255,255,0.1);
-                              margin-bottom: 10px;
-                              display: inline-block;
-                              .listing-item-title-centralizer{
-                                    text-align: left;
-                                    padding-left: 140px;
-                                    padding-top: 15px;
-                                    overflow: visible;
-                                    position: absolute;
-                                    z-index: 100;
-                                    top: 0;
-                                    left: 0;
-                                    display: block;
-                                    width: 100%;
-                                    height: 100%;
-                                    padding: 0 15px 8px 15px;
-                                    border-radius: 50%;
-                                    font-size: 0;
-                                    .listing-item-title{
-                                      position: initial;
-                                      color: rgb(38,163,135);
-                                      height: 22px;
-                                      overflow: hidden;
-                                      vertical-align: top;
-                                      margin-top: 5px;
-                                      white-space: normal;
-                                      padding: 0;
-                                      text-shadow: none;
-                                      letter-spacing: 0;
-                                      width: 100%;
-                                      display: inline-block;
-                                      font-size: 15px;
-                                      font-family: 'Roboto-condensed';
+      .white{
+            padding-bottom: 0;
+            display: flex;
+            text-align: center;
+            flex-wrap: wrap;
+            width: 100%;
+            box-sizing:border-box;
+            .col-sm-3{
+                  position: relative;
+                  min-height: 1px;
+                  padding-right: 15px;
+                  padding-left: 15px;
+                  width: 49.94%;
+                  float: left;
+                  @media(max-width:780px) and (max-width:981px){
+                    width: 100%;
+                  }
+                  .listing-item{
+                    max-width: 100%;
+                    margin-bottom: 20px;
+                    position: relative;
+                    display: inline-block;
+                    width:100%;
+                    // &:hover{
+                    //   .icon-dinner{
+                    //     top:-41%;
+                    //     visibility: hidden;
+                    //   }
+                    // }
+                    .icon-dinner{
+                          left: 0;
+                          top: 12%;
+                          margin-left: -4px;
+                          background: #fff;
+                          color: rgb(38,163,135);
+                          position: absolute;
+                          width: 44px;
+                          height: 44px;
+                          line-height: 44px;
+                          font-size: 30px;
+                          padding-top: 3px;
+                          text-align: center;
+                          transition-duration: 1s;
+                          box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.10), -2px -2px 5px 0 rgba(0,0,0,0.10);
+                          border-radius: 50%;
+                          z-index: 15;
+                          margin-top: -26px;
+                    }
+                    .listing-item-link{
+                         transform: scale(1);
+                         box-shadow: 8px 8px 12px 0 rgba(0,0,0,0.12), -8px -8px 12px 0 rgba(0,0,0,0.12);
+                         border-radius: 14px 0 0 14px;
+                         width: 100%;
+                         text-align: left;
+                         transition: all 1s;
+                         position: relative;
+                         background: rgba(255,255,255,0.1);
+                         margin-bottom: 10px;
+                         display: inline-block;
+                         &:hover, a:focus {
+                                        text-decoration: none;
+                                        color: rgb(38,163,135);
                                     }
-                              }
-                                 img{
-                                      width: 130px;
-                                      border-radius: 15px;
-                                      transition: all 1s;
-                                      max-width: 100%;
-                                      vertical-align: middle;
-                                      border:0;
-                                      text-align: left;
+                                    .listing-item-title-centralizer{
+                                               text-align: left;
+                                               padding-left: 140px!important;
+                                               padding-top: 15px;
+                                               overflow: visible;
+                                               position: absolute;
+                                               z-index: 100;
+                                               top: 0;
+                                               left: 0;
+                                               display: block;
+                                               width: 100%;
+                                               height: 100%;
+                                               padding: 0 15px 8px 15px;
+                                               border-radius:50%;
+                                               font-size: 0;
+                                               // &:before {
+                                               //        content: '';
+                                               //        display: inline-block;
+                                               //        height: 100%;
+                                               //        vertical-align: middle;
+                                               //        margin-right: -0.25em;
+                                               //    }
+                                               .listing-item-title{
+                                                    position: initial;
+                                                    color: rgb(38,163,135);
+                                                    height: 22px;
+                                                    overflow: hidden;
+                                                    vertical-align: top;
+                                                    margin-top: 1em;
+                                                    white-space: normal;
+                                                    padding: 0;
+                                                    text-shadow: none;
+                                                    letter-spacing: 0;
+                                                    width: 100%;
+                                                    display: inline-block;
+                                                    font-size: 20px;
+                                                    font-family:'Roboto-condensed';
+                                                    text-align: left;
+                                                      @media(max-width:780px) and (max-width:981px){
+                                                         margin-top: 5px;
+                                                       }
+                                               }
+                                    }
+                                    img{
+                                          width: 130px;
+                                          border-radius: 15px;
+                                          transform: scale(0.92);
+                                          transition: all 1s;
+                                          max-width: 100%;
+                                          text-align: left;
+                                          border:0;
                                     }
                                     .listing-black-overlay{
                                           opacity: 0;
+                                          transform: scale(0.92);
                                           position: absolute;
                                           display: block;
                                           border-radius: 50%;
@@ -401,63 +393,83 @@
                                           z-index: 10;
                                           background-repeat: no-repeat;
                                           background-size: 100% 100%;
+                                          text-align: left;
                                     }
-                            }
-                            .listing-item-data{
-                                  padding-left: 140px;
-                                  position: absolute;
-                                  z-index: -15;
-                                  top: auto;
-                                  bottom: 38px;
-                                  text-align: left;
-                                  margin-top: 30px;
+                    }
+                    .listing-item-data{
+                             padding-left: 140px;
+                             position: absolute;
+                             z-index: -15;
+                             top: auto;
+                             bottom: 38px;
+                             text-align: left;
+                             margin-top: 30px;
+                             position: absolute;
+                             margin-top: -7px;
+                             color: rgb(38,163,135);
+                             // &:before {
+                             //          font-family: "FontAwesome";
+                             //          content: "\f041";
+                             //          position: relative;
+                             //          display: block;
+                             //          width: 100%;
+                             //          margin-top: -35px;
+                             //          font-size: 22px;
+                             //          color: #fff;
+                             //      }
                                   .listing-item-address{
-                                        padding-left: 18px;
-                                        font-size: 12px;
-                                        max-height: 36px;
-                                        overflow: hidden;
-                                        color: #202020;
-                                        text-shadow: none;
-                                        letter-spacing: 0;
-                                        padding-bottom: 4px;
-                                        width: 100%;
+                                     padding-left: 0;
+                                     font-size: 12px;
+                                     max-height: 36px;
+                                     overflow: hidden;
+                                     text-align: left;
+                                     color: #202020;
+                                     text-shadow: none;
+                                     letter-spacing: 0;
+                                     padding-bottom: 4px;
+                                     // width: 100%;
+                                     i{
+                                          color: rgb(38,163,135);
+                                          font-size: 25px;
+                                     }
                                   }
                                   .listing-item-excerpt{
-                                        height: 22px;
-                                        overflow: hidden;
-                                        text-align: left;
-                                        border-top: 1px dashed rgba(150,150,150,1);
-                                        max-height: 100px;
-                                        line-height: 16px;
-                                        color: #202020;
-                                        text-shadow: none;
-                                        letter-spacing: 0;
-                                        font-size: 14px;
-                                        opacity: 0.8;
-                                        padding-top:4px;
-                                        width: 100%;
+                                     height: 22px;
+                                     overflow: hidden;
+                                     text-align: left;
+                                     border-top: 1px dashed rgba(150,150,150,1);
+                                      max-height: 100px;
+                                      line-height: 16px;
+                                      font-size: 14px;
+                                      opacity: 0.8;
+                                      width: 100%;
+                                      color: #202020;
+                                      text-shadow: none;
+                                      letter-spacing: 0;
                                   }
-                            }
-                            .listing-category-name{
-                                   position: absolute;
-                                   right: 8px;
-                                   bottom: 12px;
-                                   color: #202020;
-                                   font-weight: normal;
-                                   font-size: 15px;
-                                   a{
-                                        text-align: center!important;
-                                        text-shadow: none;
-                                        color: rgb(38,163,135);
-                                        display: inline-block;
-                                        margin-top: 3px;
-                                        text-transform: uppercase;
-                                        font-size: 13px;
+                    }
+                    .listing-category-name{
+                         position: absolute;
+                         right: 8px;
+                         bottom: 12px;
+                         text-align: center;
+                         color: #202020;
+                         font-weight: normal;
+                         font-size: 15px;
+                         font-family: 'Roboto';
+                         a{
+                              text-shadow: none;
+                              color: rgb(38,163,135);
+                              margin-top: 3px;
+                              text-transform: uppercase;
+                              font-size: 13px;
+                              &:hover,:focus{
                                         text-decoration: none;
-                                   }
-                            }
-                      }
-                }
-          }
+                              }
+                         }
+                    }
+                  }
+            }
+      }
     }
     // listing block end

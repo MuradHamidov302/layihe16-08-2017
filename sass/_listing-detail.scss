@@ -693,20 +693,7 @@ a, a:hover, a:focus {
 .list-mobile:before {
     content: "\eaa8";
 }
-.list-address:before, .list-phone:before,
- .list-mobile:before, .list-fax:before, .list-email:before, .list-website:before {
-    font-family: 'icon';
-    color: rgb(38,163,135);
-    font-size: 20px;
-    width: 40px;
-    text-align: center;
-    position: relative;
-    float: left;
-    top: -9px;
-    left: -3px;
-    line-height: 8px;
-    padding-top: 13px;
-}
+
 .listing-description .list-address, 
 .listing-description .list-phones,
  .listing-description .list-online-data {

@@ -130,14 +130,15 @@
         <div class="backgroundMap container-fluid">
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d388630.94775344006!2d49.53860106987237!3d40.449168810275076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1str!2s!4v1503758563035" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
-        <div class="tor">
+        <div id="mapTor" onclick="mapOpen()" class="tor">
             <div class="tor-Center">
+               <div onclick="mapClose()" id="switchTor"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></div>
                 <i class="fa fa-location-arrow mapIcon" aria-hidden="true"></i>
                 <div class="map-button-text"> Xəritə Görünüşünə Baxin </div>
             </div>
         </div>
         <!-- Mapin ustundeki sekil begin -->
-        <div class="current-page-info"> 
+        <div id="mapImg" class="current-page-info"> 
            <div class="breadcrumbs text-left">
                   <ul>
                     <li>
@@ -183,17 +184,128 @@
                      <i class="fa fa-bars" aria-hidden="true"></i>
                  </a>
                  <!-- selector begin -->
-                 <select id="mySelector" class="selectpicker bs-select-hidden" multiple="" data-max-options="5" data-live-search="true"> <optgroup label="Cities">  <option data-icon="icon-city">Boston</option> <option data-icon="icon-city">Chicago</option> <option data-icon="icon-city">Miami</option> <option data-icon="icon-city">New Orleans</option> <option data-icon="icon-city">New York City</option> <option data-icon="icon-city">San Francisco</option> <option data-icon="icon-city">Washington</option> </optgroup> <optgroup label="Categories"> <option data-icon="icon-theater">Entertaiment</option> <option data-icon="icon-palette child">Art Gallery</option> <option data-icon="icon-clapboard-play child">Movie Theather</option> <option data-icon="icon-library2 child">Museum</option> <option data-icon="icon-trophy2 child">Stadium</option> <option data-icon="icon-paw child">Zoo</option> <option data-icon="icon-dinner">Food</option> <option data-icon="icon-chef child">Bakery</option> <option data-icon="icon-teacup child">Café</option> <option data-icon="icon-pizza child">Pizza</option> <option data-icon="icon-platter child">Restaurant</option> <option data-icon="icon-glass child">Winery</option> <option data-icon="icon-moon">Nightlife</option> <option data-icon="icon-glass-cocktail child">Bar</option> <option data-icon="icon-bottle2 child">Brewery</option> <option data-icon="icon-cake child">Lounge</option> <option data-icon="icon-spotlights child">Nightclub</option> <option data-icon="icon-landscape">Outdoor Recreation</option> <option data-icon="icon-construction child">Bridge</option> <option data-icon="icon-tree child">Park</option> <option data-icon="icon-alarm">Service</option> <option data-icon="icon-car child">Car Dealer</option> <option data-icon="icon-pencil-ruler2 child">Design</option> <option data-icon="icon-bench-press child">Gim</option> <option data-icon="icon-saw child">Home Service</option> <option data-icon="icon-laundry child">Laundry</option> <option data-icon="icon-bag">Shop</option> <option data-icon="icon-bag-dollar child">Bank</option> <option data-icon="icon-library child">Bookstore</option> <option data-icon="icon-hanger child">Clothing</option> <option data-icon="icon-chair child">Furniture</option> <option data-icon="icon-home">Lodging</option> <option data-icon="icon-bed child">Hotel</option> <option data-icon="icon-bed child">Apartment</option> <option data-icon="icon-bed child">Villa</option> <option data-icon="icon-bed child">Hostel</option> </optgroup> <optgroup label="Amenities"> <option data-icon="icon-credit-card">Accepts Credit Cards</option> <option data-icon="icon-bicycle">Bike Parking</option> <option data-icon="icon-envelope">Contact Form</option> <option data-icon="icon-receipt">Coupons</option> <option data-icon="icon-baby2">Family/Kids Friendly</option> <option data-icon="icon-hand-waving">Free Entrance</option> <option data-icon="icon-lan2">Online Order</option> <option data-icon="icon-parking">Parking Street</option> <option data-icon="icon-paw">Pets Friendly</option> <option data-icon="icon-phone-wave">Phone</option> <option data-icon="icon-contacts">Reservations</option> <option data-icon="icon-pipe">Smoking Allowed</option> <option data-icon="icon-wheelchair">Wheelchair Accessible</option> <option data-icon="icon-bubble-dots">Whatsapp</option> <option data-icon="icon-wifi">Wireless Internet</option> </optgroup> 
-    </select>
+                 <div id="filterBox">
+                    <div id="search-cities-drag" style="top:-4em;left: -5em;display: none">
+           <form id="mapSearch" class="form-inline" method="post">
+                        <ul>
+                            <li>
+                                <label> Şəhər / region</label>
+                                <select class="Test" id="cities">
+                                    <option name="location" value="all">Hamısı</option>
+                                    <option name="location" value="Ağcabədi">Ağcabədi</option>
+                                    <option name="location" value="Ağdam">Ağdam</option>
+                                    <option name="location" value="Ağdaş">Ağdaş</option>
+                                    <option name="location" value="Ağdərə">Ağdərə</option>
+                                    <option name="location" value="Ağstafa">Ağstafa</option>
+                                    <option name="location" value="Ağsu">Ağsu</option>
+                                    <option name="location" value="Astara">Astara</option>
+                                    <option name="location" value="Bakı">Bakı</option>
+                                    <option name="location" value="Balakən">Balakən</option>
+                                    <option name="location" value="Beyləqan">Beyləqan</option>
+                                    <option name="location" value="Bərdə">Bərdə</option>
+                                    <option name="location" value="Biləsuvar">Biləsuvar</option>
+                                    <option name="location" value="Cəbrayıl">Cəbrayıl</option>
+                                    <option name="location" value="Cəlilabad">Cəlilabad</option>
+                                    <option name="location" value="Culfa">Culfa</option>
+                                    <option name="location" value="Daşkəsən">Daşkəsən</option>
+                                    <option name="location" value="Dəliməmmədli ">Dəliməmmədli  </option>
+                                    <option name="location" value="Füzuli">Füzuli</option>
+                                    <option name="location" value="Gədəbəy">Gədəbəy</option>
+                                    <option name="location" value="Gəncə">Gəncə</option>
+                                    <option name="location" value="Goranboy">Goranboy</option>
+                                    <option name="location" value="Göyçay">Göyçay</option>
+                                    <option name="location" value="Göygöl">Göygöl</option>
+                                    <option name="location" value="Cəlilabad">Cəlilabad</option>
+                                    <option name="location" value="Hacıqabul">Hacıqabul</option>
+                                    <option name="location" value="Xaçmaz">Xaçmaz</option>
+                                    <option name="location" value="Xankəndi">Xankəndi</option>
+                                    <option name="location" value="Xocalı">Xocalı</option>
+                                    <option name="location" value="Xocavənd">Xocavənd</option>
+                                    <option name="location" value="Xırdalan">Xırdalan</option>
+                                    <option name="location" value="Xızı">Xızı</option>
+                                    <option name="location" value="İmişli">İmişli</option>
+                                    <option name="location" value="İsmayıllı">İsmayıllı</option>
+                                    <option name="location" value="Kəlbəcər">Kəlbəcər</option>
+                                    <option name="location" value="Kürdəmir">Kürdəmir</option>
+                                    <option name="location" value="Qax">Qax</option>
+                                    <option name="location" value="Qazax">Qazax</option>
+                                    <option name="location" value="Qəbələ">Qəbələ</option>
+                                    <option name="location" value="Qobustan">Qobustan</option>
+                                    <option name="location" value="Tovuz">Tovuz</option>
+                                    <option name="location" value="Quba">Quba</option>
+                                    <option name="location" value="Qubadlı">Qubadlı</option>
+                                    <option name="location" value="Qusar">Qusar</option>
+                                    <option name="location" value="Laçın">Laçın</option>
+                                    <option name="location" value="Lerik">Lerik</option>
+                                    <option name="location" value="Lənkəran">Lənkəran</option>
+                                    <option name="location" value="Masallı">Masallı</option>
+                                    <option name="location" value="Mingəçevir">Mingəçevir</option>
+                                    <option name="location" value="Naxçıvan">Naxçıvan</option>
+                                    <option name="location" value="Neftçala">Neftçala</option>
+                                    <option name="location" value="Oğuz">Oğuz</option>
+                                    <option name="location" value="Ordubad">Ordubad</option>
+                                    <option name="location" value="Saatlı">Saatlı</option>
+                                    <option name="location" value="Sabirabad">Sabirabad</option>
+                                    <option name="location" value="Salyan">Salyan</option>
+                                    <option name="location" value="Samux">Samux</option>
+                                    <option name="location" value="Siyəzən">Siyəzən</option>
+                                    <option name="location" value="Sumqayıt">Sumqayıt</option>
+                                    <option name="location" value="Şabran">Şabran</option>
+                                    <option name="location" value="Şamaxı">Şamaxı</option>
+                                    <option name="location" value="Şahbuz">Şahbuz</option>
+                                    <option name="location" value="Şəki">Şəki</option>
+                                    <option name="location" value="Şəmkir">Şəmkir</option>
+                                    <option name="location" value="Şərur">Şərur</option>
+                                    <option name="location" value="Şirvan">Şirvan</option>
+                                    <option name="location" value="Şuşa">Şuşa</option>
+                                    <option name="location" value="Tərtər">Tərtər</option>
+                                    <option name="location" value="Ucar">Ucar</option>
+                                    <option name="location" value="Yardımlı">Yardımlı</option>
+                                    <option name="location" value="Yevlax">Yevlax</option>
+                                    <option name="location" value="Zaqatala">Zaqatala</option>
+                                    <option name="location" value="Zəngilan">Zəngilan</option>
+                                    <option name="location" value="Zərdab">Zərdab</option>
+                               </select>
+                            </li>
+                            <li>
+                                <label>Kateqoriya</label>
+                                <select class="Test" id="post_type">
+                                    <option name="type" value="all">Hamısı</option>
+                                    <option name="type" value="1">Səyahət</option>
+                                    <option name="type" value="0">Qida</option>
+                                    <option name="type" value="0">İstirahət</option>
+                                    <option name="type" value="0">Təhsil</option>
+                                    <option name="type" value="0">Sağlamliq</option>
+                                    <option name="type" value="0">Aliş-veriş</option>
+                                    <option name="type" value="0">Dizayn</option>
+                                    <option name="type" value="0">Şarm</option>
+                                    <option name="type" value="0">İdman</option>
+                                    <option name="type" value="0">Əyləncə</option>
+                                    <option name="type" value="0">Digər</option>
+                                </select>
+
+                            </li>
+                        </ul>
+                        <div class="search-error-desc" style="">
+                            <p class="infoMessage text-center"></p>
+                        </div>
+                    </form>
+         </div>
+                 </div>
                  <!-- selector end -->
                  <!-- btn slector begin -->
-                 <div onclick="myFunction()" class="btn-group bootstrap-select show-tick dropup" style="min-width: auto; max-width: 849px;"><button type="button" class="btn dropdown-toggle nothing-selected btn-default" data-toggle="dropdown" title="Filters" aria-expanded="false"><span class="filter-option pull-left">Filters</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open" style="max-height: 207px; overflow: hidden; min-height: 149px;"><div class="bs-searchbox"><input type="text" class="form-control" autocomplete="off"></div><ul class="dropdown-menu inner" role="menu" style="max-height: 153px; overflow-y: auto; min-height: 95px;"><li class="dropdown-header " data-optgroup="1"><span class="text">Cities</span></li><li data-original-index="0" data-optgroup="1"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-city"></span> <span class="text">Boston</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1" data-optgroup="1"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-city"></span> <span class="text">Chicago</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2" data-optgroup="1"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-city"></span> <span class="text">Miami</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="3" data-optgroup="1"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-city"></span> <span class="text">New Orleans</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="4" data-optgroup="1"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-city"></span> <span class="text">New York City</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="5" data-optgroup="1"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-city"></span> <span class="text">San Francisco</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="6" data-optgroup="1"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-city"></span> <span class="text">Washington</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li class="divider" data-optgroup="2div"></li><li class="dropdown-header " data-optgroup="2"><span class="text">Categories</span></li><li data-original-index="7" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-theater"></span> <span class="text">Entertaiment</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="8" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-palette child"></span> <span class="text">Art Gallery</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="9" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-clapboard-play child"></span> <span class="text">Movie Theather</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="10" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-library2 child"></span> <span class="text">Museum</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="11" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-trophy2 child"></span> <span class="text">Stadium</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="12" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-paw child"></span> <span class="text">Zoo</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="13" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-dinner"></span> <span class="text">Food</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="14" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-chef child"></span> <span class="text">Bakery</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="15" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-teacup child"></span> <span class="text">Café</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="16" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-pizza child"></span> <span class="text">Pizza</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="17" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-platter child"></span> <span class="text">Restaurant</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="18" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-glass child"></span> <span class="text">Winery</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="19" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-moon"></span> <span class="text">Nightlife</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="20" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-glass-cocktail child"></span> <span class="text">Bar</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="21" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-bottle2 child"></span> <span class="text">Brewery</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="22" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-cake child"></span> <span class="text">Lounge</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="23" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-spotlights child"></span> <span class="text">Nightclub</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="24" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-landscape"></span> <span class="text">Outdoor Recreation</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="25" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-construction child"></span> <span class="text">Bridge</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="26" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-tree child"></span> <span class="text">Park</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="27" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-alarm"></span> <span class="text">Service</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="28" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-car child"></span> <span class="text">Car Dealer</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="29" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-pencil-ruler2 child"></span> <span class="text">Design</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="30" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-bench-press child"></span> <span class="text">Gim</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="31" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-saw child"></span> <span class="text">Home Service</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="32" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-laundry child"></span> <span class="text">Laundry</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="33" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-bag"></span> <span class="text">Shop</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="34" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-bag-dollar child"></span> <span class="text">Bank</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="35" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-library child"></span> <span class="text">Bookstore</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="36" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-hanger child"></span> <span class="text">Clothing</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="37" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-chair child"></span> <span class="text">Furniture</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="38" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-home"></span> <span class="text">Lodging</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="39" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-bed child"></span> <span class="text">Hotel</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="40" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-bed child"></span> <span class="text">Apartment</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="41" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-bed child"></span> <span class="text">Villa</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="42" data-optgroup="2"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-bed child"></span> <span class="text">Hostel</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li class="divider" data-optgroup="3div"></li><li class="dropdown-header " data-optgroup="3"><span class="text">Amenities</span></li><li data-original-index="43" data-optgroup="3"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-credit-card"></span> <span class="text">Accepts Credit Cards</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="44" data-optgroup="3"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-bicycle"></span> <span class="text">Bike Parking</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="45" data-optgroup="3"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-envelope"></span> <span class="text">Contact Form</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="46" data-optgroup="3"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-receipt"></span> <span class="text">Coupons</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="47" data-optgroup="3"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-baby2"></span> <span class="text">Family/Kids Friendly</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="48" data-optgroup="3"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-hand-waving"></span> <span class="text">Free Entrance</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="49" data-optgroup="3"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-lan2"></span> <span class="text">Online Order</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="50" data-optgroup="3"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-parking"></span> <span class="text">Parking Street</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="51" data-optgroup="3"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-paw"></span> <span class="text">Pets Friendly</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="52" data-optgroup="3"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-phone-wave"></span> <span class="text">Phone</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="53" data-optgroup="3"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-contacts"></span> <span class="text">Reservations</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="54" data-optgroup="3"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-pipe"></span> <span class="text">Smoking Allowed</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="55" data-optgroup="3"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-wheelchair"></span> <span class="text">Wheelchair Accessible</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="56" data-optgroup="3"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-bubble-dots"></span> <span class="text">Whatsapp</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="57" data-optgroup="3"><a tabindex="0" class="opt  " style="" data-tokens="null"><span class="glyphicon icon-wifi"></span> <span class="text">Wireless Internet</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div>
+                 <div onclick="searchBoxOpen2()" class="btn-group bootstrap-select show-tick dropup" style="min-width: auto; max-width: 849px;">
+                    <button type="button" class="btn dropdown-toggle nothing-selected btn-default" data-toggle="dropdown" title="Filters" aria-expanded="false">
+                       <span class="filter-option pull-left">Filters</span>&nbsp;
+                       <span class="bs-caret">
+                          <span class="caret"></span>
+                       </span>
+                 </button>
         </div>
         <!-- btn selector end -->
              </div>
    </div>
     <!-- result filter end -->
-
 
 
 

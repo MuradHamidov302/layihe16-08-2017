@@ -13,11 +13,11 @@
 		float: left;
 		color:white;
 		background:  rgb(38,163,135);
-		width: 25%;
-		height: 30px;
+		width: 25% !important;
+		height: 30px !important;
 		text-align: center;
 		margin: 10px;
-		border-radius: 8px;
+		
 		border:solid 1px white;
 	}
 		@media screen and (max-width: 766px) {
