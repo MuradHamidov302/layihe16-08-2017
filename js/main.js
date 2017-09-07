@@ -75,6 +75,17 @@ if (like==true) {
 }
 
 });
+$("#reyting i").click(function(){
+
+if (like==true) {
+  $( this ).css( "color", "red" );
+  like=false;
+}else{
+   $( this ).css( "color", "#2AA589");
+   like=true;
+}
+
+});
 //end like button
 
  var a=2;

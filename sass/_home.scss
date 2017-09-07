@@ -433,8 +433,8 @@
     top: 12%;
     left: auto;
     right: 26%;
-margin-right: -24px;
-    margin-top: -7px;
+    margin-right: -30px;
+    margin-top: -13px;
     width: 32px;
     height: 32px;
     line-height: 22px;
@@ -534,6 +534,34 @@ margin-right: -24px;
     text-shadow: 0 0 6px rgba(0,0,0,0.7);
 }
 
+.listing-item-data{
+  p{
+    color: #2AA589;
+  }
+  text-align: center;
+  i{
+     cursor: pointer;
+     color: #2AA589;  transition: .5s transform;
+     &:hover{
+       transform: rotateX(360deg) scale(1.2);
+     }
+  }
+  .fa-heart-o:before {
+    content: "\f08a";
+
+   } 
+   .fa-heart-o:hover:before {
+   
+    content: "\f004";
+   } 
+   .fa-square-o:before {
+    content: "\f096";
+}
+ .fa-square-o:hover:before {
+     content: "\f046";
+}
+}   
+ 
 
 
 
